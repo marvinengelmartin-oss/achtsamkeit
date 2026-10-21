@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<title>BFit24 | Atme mit Panda</title>
+<meta name="supported-color-schemes" content="dark">
+<meta name="theme-color" content="#0b0b0b">
+<title>BFit24 | Achtsamkeit mit dem Gorilla</title>
 <style>
 :root{--bg:#0b0b0b;--card:#1b1b1b;--ink:#fff;--mute:#a3a3a3;--acc:#06E113;--line:#2e2e2e;--pf:#fff;--pk:#000;
 color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -108,6 +110,78 @@ svg.p{width:100%;max-width:320px;height:auto;display:block;margin:0 auto}
 .gc.ok{background:var(--acc);border-color:var(--acc);color:#000}
 .game>.chip{display:block;margin:0 auto}
 .tabs .tab:last-child:nth-child(3n+1){grid-column:1/-1}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark}}
+@media (prefers-color-scheme:light){:root{color-scheme:dark}}
+svg,svg *{forced-color-adjust:none}
+
+.top{display:flex;align-items:center;justify-content:space-between;margin:0 0 10px}
+.top .logo{margin:0;width:104px}
+.lnk{background:none;border:0;color:var(--mute);font:inherit;font-size:.82rem;cursor:pointer;padding:8px 0;min-height:40px}
+.v{text-align:left}
+.hi{font-size:1.5rem;font-weight:900;font-style:italic;text-transform:uppercase;margin:6px 0 2px;line-height:1.15}
+.hi span{color:var(--acc)}
+.sub2{color:var(--mute);margin:0 0 14px;font-size:.95rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px}
+.week{display:flex;justify-content:space-between;margin:12px 4px 4px}
+.wd{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.72rem;color:var(--mute);font-weight:700}
+.wd i{width:30px;height:30px;border-radius:50%;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:.9rem;color:#000}
+.wd.on i{background:var(--acc);border-color:var(--acc)}
+.wd.now i{border-color:var(--acc)}
+.wd.now{color:var(--ink)}
+.bar.sm{margin:8px 0 0;height:6px}
+.card .goal{margin:10px 0 0;text-align:left}
+.card .stats{justify-content:flex-start;margin:0}
+.hero2{margin:14px 0 0;display:block;width:100%;text-align:left;border:0;border-radius:22px;padding:18px;color:#000;background:linear-gradient(135deg,#06E113,#0bb815);cursor:pointer;font:inherit}
+.hero2 small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;opacity:.75}
+.hero2 b{display:block;font-size:1.45rem;font-style:italic;text-transform:uppercase;font-weight:900;margin:6px 0 4px;line-height:1.1;overflow-wrap:anywhere}
+.hero2 span{display:block;font-size:.92rem;line-height:1.4;opacity:.85}
+.hero2 em{display:inline-block;margin-top:12px;background:#000;color:var(--acc);font-style:italic;font-weight:900;text-transform:uppercase;border-radius:999px;padding:10px 22px;font-size:.95rem}
+.h2{font-size:1rem;text-transform:uppercase;font-style:italic;font-weight:900;margin:24px 0 10px}
+.h2 span{color:var(--acc)}
+.hs{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;scrollbar-width:none;margin:0 -16px;padding:0 16px 6px}
+.hs::-webkit-scrollbar,.fr::-webkit-scrollbar{display:none}
+.qk{flex:0 0 140px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:16px;padding:12px;text-align:left;font:inherit;cursor:pointer}
+.qk span{font-size:1.4rem;display:block;margin-bottom:6px}
+.qk b{display:block;font-size:.95rem;overflow-wrap:anywhere}
+.qk small{color:var(--acc);font-weight:700;font-size:.75rem}
+.gl{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gl button{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:16px;padding:14px 12px;text-align:left;font:inherit;cursor:pointer;min-height:76px}
+.gl button span{font-size:1.5rem;display:block;margin-bottom:4px}
+.gl button b{font-size:.95rem}
+.xc{display:flex;align-items:center;gap:12px;width:100%;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:16px;padding:12px;text-align:left;font:inherit;cursor:pointer;margin:0 0 8px}
+.xi{flex:0 0 44px;height:44px;border-radius:14px;background:rgba(6,225,19,.12);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.xm{flex:1;min-width:0}
+.xm b{display:block;font-size:1rem;overflow-wrap:anywhere}
+.xd{display:block;color:var(--mute);font-size:.82rem;margin-top:2px;line-height:1.35}
+.xt{flex:0 0 auto;text-align:right;font-size:.74rem;color:var(--acc);font-weight:700;max-width:74px}
+.xt i{display:flex;margin:6px 0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#000;align-items:center;justify-content:center;font-style:normal;font-size:.8rem}
+.fr{display:flex;gap:8px;overflow-x:auto;margin:0 -16px 14px;padding:0 16px 4px;scrollbar-width:none}
+.fc{flex:0 0 auto;border:2px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;min-height:40px;white-space:nowrap}
+.fc[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#000}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:10;background:#101010;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+.nav>div{display:flex;width:100%;max-width:480px;margin:0 auto}
+.nv{flex:1;background:none;border:0;color:var(--mute);font:inherit;font-size:.7rem;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px 10px;min-height:58px;cursor:pointer}
+.nv span{font-size:1.35rem;line-height:1}
+.nv[aria-selected="true"]{color:var(--acc)}
+#app{padding-bottom:104px}
+.play{position:fixed;inset:0;z-index:50;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.pbar{position:sticky;top:0;z-index:5;background:#0b0b0b;display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line)}
+.pbar .x{flex:0 0 44px;height:44px;border-radius:50%;border:2px solid var(--line);background:transparent;color:var(--ink);font-size:1.1rem;cursor:pointer}
+.pbar b{flex:1;font-size:1rem;text-transform:uppercase;font-style:italic;font-weight:900;overflow-wrap:anywhere}
+.pbar span{color:var(--acc);font-size:.8rem;font-weight:700;white-space:nowrap}
+.pbody{max-width:480px;margin:0 auto;padding:14px 16px 40px;text-align:center}
+.intro{margin:14px 0 0;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+.intro h3{margin:0 0 6px;font-size:.9rem;text-transform:uppercase;font-style:italic;font-weight:900;color:var(--acc)}
+.intro p{margin:0;font-size:.92rem;line-height:1.55}
+.tl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 4px}
+.tl div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 12px}
+.tl b{display:block;font-size:1.6rem;font-weight:900;font-style:italic}
+.tl small{color:var(--mute);font-size:.78rem}
+.rwl{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin:0 0 8px}
+.rwl.lock{opacity:.55}
+.rwl i{flex:0 0 44px;height:44px;border-radius:14px;background:rgba(6,225,19,.12);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:1.4rem}
+.rwl b{display:block}.rwl small{color:var(--mute)}
+body.lock{overflow:hidden}
 </style>
 </head>
 <body>
@@ -124,7 +198,7 @@ svg.p{width:100%;max-width:320px;height:auto;display:block;margin:0 auto}
 <span class="eyebrow">Achtsamkeitstraining</span>
 <h1>Mehr Ruhe. Mehr Fokus. <span>Jeden Tag.</span></h1>
 <div class="orb" aria-hidden="true"><i>Atme</i></div>
-<p class="lead">Achtsamkeit heißt, den Moment bewusst und ohne Bewertung wahrzunehmen. Dein Panda führt dich in wenigen Minuten durch Atem-, Körper- und Achtsamkeitsübungen.</p>
+<p class="lead">Achtsamkeit heißt, den Moment bewusst und ohne Bewertung wahrzunehmen. Dein Gorilla führt dich in wenigen Minuten durch Atem-, Körper- und Achtsamkeitsübungen.</p>
 <button class="go" onclick="go()">Jetzt starten</button>
 </section>
 
@@ -140,71 +214,118 @@ svg.p{width:100%;max-width:320px;height:auto;display:block;margin:0 auto}
 <section class="sec">
 <h2>Sieben <span>Bereiche</span></h2>
 <div class="pills"><span>🌬️ Atemübungen</span><span>🧘 Körper</span><span>🌿 Geist &amp; Alltag</span><span>☀️ Morgenroutine</span><span>🌙 Abendroutine</span><span>🏋️ Training</span><span>🎮 Spiele</span></div>
-<p class="tip">Starte klein: 1 bis 3 Minuten am Tag genügen. Sammle Bambus und schalte Belohnungen für deinen Panda frei.</p>
+<p class="tip">Starte klein: 1 bis 3 Minuten am Tag genügen. Sammle Bambus und schalte Belohnungen für deinen Gorilla frei.</p>
 </section>
 
 <p class="note">Die Übungen ersetzen keine ärztliche Behandlung. Bei Schwindel, Schmerzen oder Unwohlsein brich die Übung ab.</p>
 </main>
 <main id="app" class="hide">
-<svg class="logo" role="img" aria-label="BFit24" viewBox="0 0 123 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<header class="top"><svg class="logo" role="img" aria-label="BFit24" viewBox="0 0 123 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.20147 0.52832H18.4184C20.527 0.52832 22.1964 1.01493 23.4266 1.98633C24.6568 2.95956 25.2729 4.28818 25.2729 5.97583C25.2729 6.4916 25.2255 6.98368 25.1325 7.45207C24.9448 8.36515 24.5584 9.25089 23.9734 10.1057C23.3866 10.9622 22.6484 11.6584 21.759 12.1979C22.5318 12.6189 23.0949 13.111 23.4467 13.6741C23.7984 14.2373 23.9734 14.9171 23.9734 15.7135C23.9734 16.2293 23.9023 16.8034 23.762 17.4358C23.4339 18.9831 22.7724 20.3354 21.7754 21.4964C20.7785 22.6555 19.5848 23.5467 18.1906 24.1682C16.7963 24.7897 15.3256 25.0995 13.7782 25.0995H0L2.60438 12.7975C3.16389 10.1549 4.64742 7.79835 6.78888 6.15261H4.01136L5.20147 0.52832ZM12.4788 19.4752C13.3226 19.4752 13.9605 19.3112 14.3942 18.9831C14.828 18.6551 15.1269 18.1284 15.2909 17.4012C15.3383 17.2372 15.362 17.0039 15.362 16.6977C15.362 16.2293 15.2034 15.8776 14.8882 15.6425C14.571 15.4092 14.0626 15.2907 13.3591 15.2907H10.1605L9.28209 19.4734H12.4806L12.4788 19.4752ZM14.0607 9.84321C14.7861 9.84321 15.3492 9.69741 15.7484 9.40398C16.1457 9.11056 16.4154 8.62577 16.5576 7.94597C16.605 7.6653 16.6287 7.47758 16.6287 7.38281C16.6287 6.96181 16.4829 6.65016 16.1894 6.4515C15.896 6.25285 15.4458 6.15261 14.8353 6.15261H12.0942L11.3215 9.84321H14.0626H14.0607Z" fill="#06E113"/>
 <path d="M64.8529 7.52315H58.5615L60.0378 0.52832H80.953L79.4767 7.52315H73.1854L69.4602 25.0977H61.1295L63.455 14.1261C64.0181 11.4689 65.5436 9.11238 67.7379 7.51039L64.8547 7.52315H64.8529Z" fill="white"/>
 <path d="M29.6779 0.52832H47.8867L46.4104 7.52315H36.5324L36.0749 9.66825H43.0698L41.7339 15.9596H34.739L32.8053 25.0995H24.4746L29.6779 0.52832Z" fill="white"/>
 <path d="M49.6419 0.52832H57.9726L52.7712 25.0995H44.4404L49.6419 0.52832Z" fill="white"/>
 <path d="M77.7272 20.8806L81.2429 18.2434C81.899 17.7276 82.9177 16.9895 84.301 16.0291C86.3404 14.6002 87.8331 13.4575 88.7826 12.6027C89.7321 11.748 90.288 10.9224 90.452 10.1241C90.4994 9.89081 90.5231 9.71402 90.5231 9.59738C90.5231 8.44919 89.5973 7.8751 87.7456 7.8751C86.6667 7.8751 85.4893 8.09745 84.2136 8.54214C82.936 8.98684 81.7586 9.57369 80.6815 10.2991L82.3692 2.42577C83.6103 1.67672 85.0574 1.0844 86.7104 0.650639C88.3634 0.21688 90.0329 0 91.7187 0C94.2502 0 96.2057 0.568626 97.589 1.70405C98.9705 2.84131 99.663 4.32301 99.663 6.151C99.663 6.59569 99.6047 7.11147 99.4881 7.69832C99.0434 9.71402 98.3162 11.4017 97.3083 12.7595C96.3005 14.1191 94.8352 15.5133 92.9143 16.9421L90.4192 18.8047H97.8004L96.4645 25.0961H76.8506L77.729 20.8788L77.7272 20.8806Z" fill="#06E113"/>
 <path d="M109.997 20.5997H99.1709L100.19 15.7135L114.846 0.52832H122.579L119.661 14.3066H123L121.664 20.5979H118.326L117.376 25.0977H109.045L109.995 20.5979L109.997 20.5997ZM112.725 14.4378L113.722 9.62086L109.113 14.4378H112.725Z" fill="#06E113"/>
-</svg>
-<div class="bk"><button onclick="info()">← Einführung</button></div>
-<h1>Atme mit <span>Panda</span></h1>
-<p class="sub">Atme im Takt des Pandas. Einfach zuschauen und mitmachen.</p>
-<div class="stats"><span id="stB">🎋 0</span><span id="stS">🔥 0 Tage</span></div>
-<p class="goal" id="stG"></p>
+</svg><button class="lnk" onclick="info()">Einführung</button></header>
+
+<section class="v" id="vhome">
+<h1 class="hi" id="hi">Hallo</h1>
+<p class="sub2">Schön, dass du da bist. Nimm dir einen Moment für dich.</p>
+<div class="card">
+<div class="stats"><span id="stS">🔥 0 Tage</span><span id="stB">🎋 0</span></div>
+<div class="week" id="wk"></div>
+<p class="goal" id="stG"></p><div class="bar sm"><i id="stP"></i></div>
+</div>
+<div id="hero"></div>
+<h2 class="h2">Kurz <span>&amp; gut</span></h2>
+<div class="hs" id="quick"></div>
+<h2 class="h2">Wobei möchtest du <span>Hilfe?</span></h2>
+<div class="gl" id="goals"></div>
+</section>
+
+<section class="v hide" id="vlib">
+<h1 class="hi">Alle <span>Übungen</span></h1>
+<p class="sub2">Such dir nach Ziel oder Bereich eine Übung aus. Tippe darauf, dann führt dich der Gorilla.</p>
+<div class="fr" id="gf"></div>
+<div id="lib"></div>
+</section>
+
+<section class="v hide" id="vgames">
+<h1 class="hi">Mini-<span>Spiele</span></h1>
+<p class="sub2">Trainiere deine Konzentration. Jeder Sieg bringt dir einen Bambus.</p>
+<div id="gm"></div>
+</section>
+
+<section class="v hide" id="vprog">
+<h1 class="hi">Dein <span>Fortschritt</span></h1>
+<p class="sub2">Bleib dran: Schon wenige Minuten am Tag machen einen Unterschied.</p>
+<div class="tl" id="tl"></div>
+<h2 class="h2">Belohnungen für <span>deinen Gorilla</span></h2>
+<div id="rwl"></div>
+<p class="note">Die Übungen ersetzen keine ärztliche Behandlung. Bei Schwindel, Schmerzen oder Unwohlsein brich die Übung ab.</p>
+</section>
+
+<nav class="nav" aria-label="Bereiche"><div>
+<button class="nv" id="nhome" onclick="tab('home')"><span>🏠</span>Start</button>
+<button class="nv" id="nlib" onclick="tab('lib')"><span>🧘</span>Übungen</button>
+<button class="nv" id="ngames" onclick="tab('games')"><span>🎮</span>Spiele</button>
+<button class="nv" id="nprog" onclick="tab('prog')"><span>🌿</span>Fortschritt</button>
+</div></nav>
+</main>
+
+<div id="play" class="play hide" role="dialog" aria-modal="true" aria-label="Übung">
+<div class="pbar"><button class="x" onclick="closeEx()" aria-label="Schließen">✕</button><b id="pt">Übung</b><span id="pd"></span></div>
+<div class="pbody">
 <div class="stage">
 <div id="sky"></div>
 <div id="conf"></div>
-<svg class="p" id="svg" viewBox="0 0 240 258" role="img" aria-label="Panda, der ruhig atmet">
+<svg class="p" id="svg" viewBox="0 0 240 258" role="img" aria-label="Gorilla, der ruhig atmet">
 <circle id="ring" cx="120" cy="140" r="80" fill="#06E113" opacity=".3"/>
 <defs>
-<radialGradient id="gw" cx=".5" cy=".35" r=".85"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#d5dae3"/></radialGradient>
+<radialGradient id="gw" cx=".5" cy=".35" r=".85"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e4e8ef"/></radialGradient>
 <radialGradient id="gb" cx=".5" cy=".3" r=".85"><stop offset="0" stop-color="#55555b"/><stop offset="1" stop-color="#050506"/></radialGradient>
 <radialGradient id="gbl" cx=".5" cy=".4" r=".8"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e6e9ef"/></radialGradient>
 <radialGradient id="gp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2a2a2e"/><stop offset=".72" stop-color="#0b0b0c"/><stop offset="1" stop-color="#0b0b0c" stop-opacity="0"/></radialGradient>
 <radialGradient id="gi" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#c58a3e"/><stop offset="1" stop-color="#5a3410"/></radialGradient>
 <linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a1218"/><stop offset=".55" stop-color="#8a2a35"/><stop offset="1" stop-color="#e58a95"/></linearGradient>
+<radialGradient id="gk" cx=".5" cy=".28" r=".9"><stop offset="0" stop-color="#3c3c44"/><stop offset=".6" stop-color="#202025"/><stop offset="1" stop-color="#121215"/></radialGradient>
+<radialGradient id="gk2" cx=".5" cy=".35" r=".85"><stop offset="0" stop-color="#3a3a42"/><stop offset="1" stop-color="#1d1d22"/></radialGradient>
+<radialGradient id="gf" cx=".5" cy=".3" r=".9"><stop offset="0" stop-color="#b2a79d"/><stop offset="1" stop-color="#7d746c"/></radialGradient>
+<radialGradient id="gm2" cx=".5" cy=".35" r=".8"><stop offset="0" stop-color="#d0c6bb"/><stop offset="1" stop-color="#a59b91"/></radialGradient>
 </defs>
 <g id="grass"><path d="M-4 262L-4 250L0 240 L3 250L6 233 L10 250L13 234 L17 250L20 239 L24 250L27 237 L31 250L34 237 L38 250L41 235 L45 250L48 234 L52 250L55 241 L59 250L62 241 L66 250L69 233 L73 250L76 237 L80 250L83 234 L87 250L90 241 L94 250L97 237 L101 250L104 234 L108 250L111 239 L115 250L118 232 L122 250L125 232 L129 250L132 241 L136 250L139 241 L143 250L146 236 L150 250L153 232 L157 250L160 238 L164 250L167 239 L171 250L174 237 L178 250L181 241 L185 250L188 239 L192 250L195 237 L199 250L202 237 L206 250L209 239 L213 250L216 239 L220 250L223 239 L227 250L230 237 L234 250L237 239 L241 250L244 241 L248 250L244 262Z" fill="#2e7d3a" opacity=".9"/><path d="M-4 262L-4 250L0 238 L5 250L9 238 L14 250L18 244 L23 250L27 244 L32 250L36 239 L41 250L45 239 L50 250L54 240 L59 250L63 242 L68 250L72 240 L77 250L81 240 L86 250L90 240 L95 250L99 243 L104 250L108 241 L113 250L117 242 L122 250L126 239 L131 250L135 238 L140 250L144 238 L149 250L153 241 L158 250L162 241 L167 250L171 243 L176 250L180 244 L185 250L189 244 L194 250L198 241 L203 250L207 242 L212 250L216 242 L221 250L225 238 L230 250L234 241 L239 250L243 241 L248 250L244 262Z" fill="#46a652" opacity=".9"/></g>
 <g id="p">
-<circle cx="70" cy="52" r="19" fill="url(#gb)" stroke="#5a5a60" stroke-width="1.5"/><circle cx="170" cy="52" r="19" fill="url(#gb)" stroke="#5a5a60" stroke-width="1.5"/>
-<ellipse cx="120" cy="188" rx="56" ry="50" fill="url(#gw)"/><g fill="none" stroke="#c4cad6" stroke-width=".8" stroke-linecap="round" opacity=".4"><path d="M110.2 156.4Q110.8 154.5 109.5 153.2M114.3 155.0Q115.0 153.2 113.8 151.6M83.9 173.2Q82.4 171.1 80.0 170.7M84.8 218.0Q82.7 218.2 81.6 220.0M73.7 175.8Q72.1 174.0 69.8 174.1M103.9 150.5Q104.3 148.6 102.8 147.4M99.7 153.8Q99.8 151.7 98.1 150.5M90.0 220.4Q87.8 221.0 86.8 223.0M105.3 149.1Q105.5 146.5 103.8 144.6M75.9 180.5Q74.3 178.9 72.0 179.1M82.4 215.5Q80.3 215.5 79.1 217.2M86.1 156.9Q85.5 154.6 83.3 153.7"/><path d="M110.2 156.4Q110.8 154.5 109.5 153.2M114.3 155.0Q115.0 153.2 113.8 151.6M83.9 173.2Q82.4 171.1 80.0 170.7M84.8 218.0Q82.7 218.2 81.6 220.0M73.7 175.8Q72.1 174.0 69.8 174.1M103.9 150.5Q104.3 148.6 102.8 147.4M99.7 153.8Q99.8 151.7 98.1 150.5M90.0 220.4Q87.8 221.0 86.8 223.0M105.3 149.1Q105.5 146.5 103.8 144.6M75.9 180.5Q74.3 178.9 72.0 179.1M82.4 215.5Q80.3 215.5 79.1 217.2M86.1 156.9Q85.5 154.6 83.3 153.7" transform="matrix(-1 0 0 1 240 0)"/></g>
-<ellipse id="belly" cx="120" cy="196" rx="34" ry="30" fill="url(#gbl)"/>
-<ellipse cx="84" cy="234" rx="27" ry="17" fill="url(#gb)" stroke="#5a5a60" stroke-width="1.5"/><ellipse cx="156" cy="234" rx="27" ry="17" fill="url(#gb)" stroke="#5a5a60" stroke-width="1.5"/>
-<ellipse cx="84" cy="238" rx="13" ry="7" fill="#3c3c42"/><ellipse cx="156" cy="238" rx="13" ry="7" fill="#3c3c42"/>
-<g fill="none" stroke="#5a5a60" stroke-width="29" stroke-linecap="round"><path d="M74 156Q52 176 52 206"/><path d="M74 156Q52 176 52 206" transform="matrix(-1 0 0 1 240 0)"/></g><g class="open"><circle cx="52" cy="212" r="16" fill="#5a5a60"/><circle cx="188" cy="212" r="16" fill="#5a5a60"/></g><g class="closed"><circle cx="52" cy="214" r="18.5" fill="#5a5a60"/><circle cx="188" cy="214" r="18.5" fill="#5a5a60"/></g>
-<g fill="none" stroke="#0d0d0f" stroke-width="26" stroke-linecap="round"><path d="M74 156Q52 176 52 206"/><path d="M74 156Q52 176 52 206" transform="matrix(-1 0 0 1 240 0)"/></g><g class="open"><circle cx="52" cy="212" r="14.5" fill="url(#gb)"/><circle cx="188" cy="212" r="14.5" fill="url(#gb)"/></g><g class="closed"><circle cx="52" cy="214" r="17" fill="url(#gb)"/><circle cx="188" cy="214" r="17" fill="url(#gb)"/></g>
-<g class="open" fill="none" stroke="#777" stroke-width="1.6" stroke-linecap="round"><path d="M45 218l1-7M52 220v-9M59 218l-1-7"/><path d="M45 218l1-7M52 220v-9M59 218l-1-7" transform="matrix(-1 0 0 1 240 0)"/></g>
-<g class="closed" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M41 211q11 5 22 0M42 218q10 5 20 0"/><path d="M41 211q11 5 22 0M42 218q10 5 20 0" transform="matrix(-1 0 0 1 240 0)"/></g>
-<ellipse cx="120" cy="150" rx="50" ry="9" fill="#000" opacity=".18"/>
-<ellipse cx="120" cy="100" rx="60" ry="53" fill="url(#gw)"/><g fill="none" stroke="#c4cad6" stroke-width=".8" stroke-linecap="round" opacity=".4"><path d="M75.6 96.8Q73.8 95.0 71.3 95.0M98.6 59.6Q98.8 57.5 97.2 56.1M107.9 65.0Q108.5 63.0 107.1 61.4M102.5 134.8Q100.6 135.4 100.2 137.4M83.9 123.8Q81.5 123.4 79.6 124.9M93.9 79.8Q93.7 77.9 91.9 77.2M86.3 124.9Q83.8 124.5 81.9 126.1M86.2 65.7Q85.8 63.4 83.8 62.3M84.1 87.0Q83.3 85.1 81.2 84.8M90.8 128.6Q88.4 128.5 87.0 130.3M80.1 92.6Q78.9 90.7 76.7 90.7M82.9 128.5Q80.6 128.2 79.0 129.9M82.7 71.9Q82.2 69.8 80.3 69.1M102.1 130.2Q99.7 130.9 98.5 133.2M92.3 73.3Q91.9 70.9 89.8 69.6M74.8 119.2Q73.1 118.4 71.5 119.5M79.4 70.7Q78.8 68.6 76.8 67.9M84.6 103.4Q83.2 101.9 81.2 102.3M91.7 123.6Q89.9 123.1 88.6 124.5M90.5 116.7Q88.4 115.8 86.4 116.9M83.8 108.7Q81.7 107.3 79.2 107.9M82.7 119.8Q80.3 119.1 78.1 120.4M81.3 69.2Q80.7 66.9 78.6 66.0M103.0 73.7Q103.1 71.3 101.4 69.6"/><path d="M75.6 96.8Q73.8 95.0 71.3 95.0M98.6 59.6Q98.8 57.5 97.2 56.1M107.9 65.0Q108.5 63.0 107.1 61.4M102.5 134.8Q100.6 135.4 100.2 137.4M83.9 123.8Q81.5 123.4 79.6 124.9M93.9 79.8Q93.7 77.9 91.9 77.2M86.3 124.9Q83.8 124.5 81.9 126.1M86.2 65.7Q85.8 63.4 83.8 62.3M84.1 87.0Q83.3 85.1 81.2 84.8M90.8 128.6Q88.4 128.5 87.0 130.3M80.1 92.6Q78.9 90.7 76.7 90.7M82.9 128.5Q80.6 128.2 79.0 129.9M82.7 71.9Q82.2 69.8 80.3 69.1M102.1 130.2Q99.7 130.9 98.5 133.2M92.3 73.3Q91.9 70.9 89.8 69.6M74.8 119.2Q73.1 118.4 71.5 119.5M79.4 70.7Q78.8 68.6 76.8 67.9M84.6 103.4Q83.2 101.9 81.2 102.3M91.7 123.6Q89.9 123.1 88.6 124.5M90.5 116.7Q88.4 115.8 86.4 116.9M83.8 108.7Q81.7 107.3 79.2 107.9M82.7 119.8Q80.3 119.1 78.1 120.4M81.3 69.2Q80.7 66.9 78.6 66.0M103.0 73.7Q103.1 71.3 101.4 69.6" transform="matrix(-1 0 0 1 240 0)"/></g>
-<path class="rw rb" d="M66 76Q120 40 174 76" fill="none" stroke="#06E113" stroke-width="9" stroke-linecap="round"/><path class="rw rs" d="M120.0 50.5L121.9 55.4L127.1 55.7L123.0 59.0L124.4 64.1L120.0 61.2L115.6 64.1L117.0 59.0L112.9 55.7L118.1 55.4Z" fill="#ffd54a" stroke="#c99a00" stroke-width=".8" stroke-linejoin="round"/><g class="rw rm"><path d="M108 158L120 174L132 158" fill="none" stroke="#06E113" stroke-width="5" stroke-linejoin="round"/><circle cx="120" cy="180" r="9" fill="#ffd54a" stroke="#c99a00" stroke-width="1.2"/><circle cx="120" cy="180" r="5" fill="none" stroke="#c99a00" stroke-width="1"/></g><path class="rw rc" d="M99 52L99 33L110 42L120 29L130 42L141 33L141 52Z" fill="#ffd54a" stroke="#c99a00" stroke-width="1.2" stroke-linejoin="round"/>
-<ellipse cx="90" cy="98" rx="17" ry="23" transform="rotate(28 90 98)" fill="url(#gp)"/><ellipse cx="150" cy="98" rx="17" ry="23" transform="rotate(-28 150 98)" fill="url(#gp)"/>
-<g class="eye"><g class="lid"><ellipse cx="94" cy="98" rx="7.4" ry="8.4" fill="#fff"/><g class="iris"><circle cx="94.5" cy="99" r="4.8" fill="url(#gi)"/><circle cx="94.5" cy="99" r="2.4" fill="#000"/><circle cx="96" cy="96.8" r="1.6" fill="#fff"/></g></g></g><g class="eye"><g class="lid"><ellipse cx="146" cy="98" rx="7.4" ry="8.4" fill="#fff"/><g class="iris"><circle cx="146.5" cy="99" r="4.8" fill="url(#gi)"/><circle cx="146.5" cy="99" r="2.4" fill="#000"/><circle cx="148" cy="96.8" r="1.6" fill="#fff"/></g></g></g>
-<path class="shut" d="M86.5 98.5q7.5 5 15 0" fill="none" stroke="#e9ecf1" stroke-width="2" stroke-linecap="round" style="opacity:0"/><path class="shut" d="M138.5 98.5q7.5 5 15 0" fill="none" stroke="#e9ecf1" stroke-width="2" stroke-linecap="round" style="opacity:0"/>
-<ellipse cx="120" cy="120" rx="24" ry="17" fill="url(#gbl)"/>
-<circle cx="74" cy="122" r="8" fill="#ff9aa8" opacity=".25"/><circle cx="166" cy="122" r="8" fill="#ff9aa8" opacity=".25"/>
-<path d="M107 108C107 103 133 103 133 108C133 114 125 119 120 120C115 119 107 114 107 108Z" fill="url(#gb)"/>
-<ellipse cx="114" cy="106" rx="4" ry="1.8" fill="#fff" opacity=".35"/>
-<path d="M120 120v7" stroke="#222" stroke-width="1.6" stroke-linecap="round"/>
-<path id="mouth" d="M107 129Q120 133 133 129Q120 135 107 129Z" fill="url(#mg)" stroke="#1a0a0a" stroke-width="2" stroke-linejoin="round"/>
-<ellipse id="mo" cx="120" cy="132" rx="2.5" ry="2.5" fill="url(#mg)" stroke="#1a0a0a" stroke-width="2" style="opacity:0"/>
-<g class="np npa"><path d="M92 154Q96 132 108 118" fill="none" stroke="#5a5a60" stroke-width="15" stroke-linecap="round"/><path d="M92 154Q96 132 108 118" fill="none" stroke="#0d0d0f" stroke-width="12.5" stroke-linecap="round"/><circle cx="108" cy="116" r="9.5" fill="#5a5a60"/><circle cx="108" cy="116" r="8.2" fill="url(#gb)"/><ellipse cx="108" cy="118.5" rx="3.6" ry="2.8" fill="#777"/></g><g class="np npb" transform="matrix(-1 0 0 1 240 0)"><path d="M92 154Q96 132 108 118" fill="none" stroke="#5a5a60" stroke-width="15" stroke-linecap="round"/><path d="M92 154Q96 132 108 118" fill="none" stroke="#0d0d0f" stroke-width="12.5" stroke-linecap="round"/><circle cx="108" cy="116" r="9.5" fill="#5a5a60"/><circle cx="108" cy="116" r="8.2" fill="url(#gb)"/><ellipse cx="108" cy="118.5" rx="3.6" ry="2.8" fill="#777"/></g>
+<ellipse cx="59" cy="112" rx="8" ry="11" fill="#17171a" stroke="#5d5d66" stroke-width="1.4"/><ellipse cx="181" cy="112" rx="8" ry="11" fill="#17171a" stroke="#5d5d66" stroke-width="1.4"/>
+<ellipse cx="120" cy="194" rx="74" ry="50" fill="url(#gk)" stroke="#5d5d66" stroke-width="1.4"/>
+<ellipse id="belly" cx="120" cy="201" rx="34" ry="28" fill="url(#gk2)"/>
+<g transform="translate(95.5 195.6) scale(.4)"><path d="M5.20147 0.52832H18.4184C20.527 0.52832 22.1964 1.01493 23.4266 1.98633C24.6568 2.95956 25.2729 4.28818 25.2729 5.97583C25.2729 6.4916 25.2255 6.98368 25.1325 7.45207C24.9448 8.36515 24.5584 9.25089 23.9734 10.1057C23.3866 10.9622 22.6484 11.6584 21.759 12.1979C22.5318 12.6189 23.0949 13.111 23.4467 13.6741C23.7984 14.2373 23.9734 14.9171 23.9734 15.7135C23.9734 16.2293 23.9023 16.8034 23.762 17.4358C23.4339 18.9831 22.7724 20.3354 21.7754 21.4964C20.7785 22.6555 19.5848 23.5467 18.1906 24.1682C16.7963 24.7897 15.3256 25.0995 13.7782 25.0995H0L2.60438 12.7975C3.16389 10.1549 4.64742 7.79835 6.78888 6.15261H4.01136L5.20147 0.52832ZM12.4788 19.4752C13.3226 19.4752 13.9605 19.3112 14.3942 18.9831C14.828 18.6551 15.1269 18.1284 15.2909 17.4012C15.3383 17.2372 15.362 17.0039 15.362 16.6977C15.362 16.2293 15.2034 15.8776 14.8882 15.6425C14.571 15.4092 14.0626 15.2907 13.3591 15.2907H10.1605L9.28209 19.4734H12.4806L12.4788 19.4752ZM14.0607 9.84321C14.7861 9.84321 15.3492 9.69741 15.7484 9.40398C16.1457 9.11056 16.4154 8.62577 16.5576 7.94597C16.605 7.6653 16.6287 7.47758 16.6287 7.38281C16.6287 6.96181 16.4829 6.65016 16.1894 6.4515C15.896 6.25285 15.4458 6.15261 14.8353 6.15261H12.0942L11.3215 9.84321H14.0626H14.0607Z" fill="#06E113"/><path d="M64.8529 7.52315H58.5615L60.0378 0.52832H80.953L79.4767 7.52315H73.1854L69.4602 25.0977H61.1295L63.455 14.1261C64.0181 11.4689 65.5436 9.11238 67.7379 7.51039L64.8547 7.52315H64.8529Z" fill="white"/><path d="M29.6779 0.52832H47.8867L46.4104 7.52315H36.5324L36.0749 9.66825H43.0698L41.7339 15.9596H34.739L32.8053 25.0995H24.4746L29.6779 0.52832Z" fill="white"/><path d="M49.6419 0.52832H57.9726L52.7712 25.0995H44.4404L49.6419 0.52832Z" fill="white"/><path d="M77.7272 20.8806L81.2429 18.2434C81.899 17.7276 82.9177 16.9895 84.301 16.0291C86.3404 14.6002 87.8331 13.4575 88.7826 12.6027C89.7321 11.748 90.288 10.9224 90.452 10.1241C90.4994 9.89081 90.5231 9.71402 90.5231 9.59738C90.5231 8.44919 89.5973 7.8751 87.7456 7.8751C86.6667 7.8751 85.4893 8.09745 84.2136 8.54214C82.936 8.98684 81.7586 9.57369 80.6815 10.2991L82.3692 2.42577C83.6103 1.67672 85.0574 1.0844 86.7104 0.650639C88.3634 0.21688 90.0329 0 91.7187 0C94.2502 0 96.2057 0.568626 97.589 1.70405C98.9705 2.84131 99.663 4.32301 99.663 6.151C99.663 6.59569 99.6047 7.11147 99.4881 7.69832C99.0434 9.71402 98.3162 11.4017 97.3083 12.7595C96.3005 14.1191 94.8352 15.5133 92.9143 16.9421L90.4192 18.8047H97.8004L96.4645 25.0961H76.8506L77.729 20.8788L77.7272 20.8806Z" fill="#06E113"/><path d="M109.997 20.5997H99.1709L100.19 15.7135L114.846 0.52832H122.579L119.661 14.3066H123L121.664 20.5979H118.326L117.376 25.0977H109.045L109.995 20.5979L109.997 20.5997ZM112.725 14.4378L113.722 9.62086L109.113 14.4378H112.725Z" fill="#06E113"/></g>
+<ellipse cx="86" cy="237" rx="25" ry="15" fill="#17171a" stroke="#5d5d66" stroke-width="1.4"/><ellipse cx="154" cy="237" rx="25" ry="15" fill="#17171a" stroke="#5d5d66" stroke-width="1.4"/>
+<ellipse cx="86" cy="240" rx="12" ry="6" fill="#7b716a"/><ellipse cx="154" cy="240" rx="12" ry="6" fill="#7b716a"/>
+<g fill="none" stroke="#5d5d66" stroke-width="40" stroke-linecap="round"><path d="M72 170Q42 182 42 210"/><path d="M72 170Q42 182 42 210" transform="matrix(-1 0 0 1 240 0)"/></g><g class="open"><circle cx="42" cy="216" r="21.5" fill="#5d5d66"/><circle cx="198" cy="216" r="21.5" fill="#5d5d66"/></g><g class="closed"><circle cx="42" cy="218" r="24" fill="#5d5d66"/><circle cx="198" cy="218" r="24" fill="#5d5d66"/></g>
+<g fill="none" stroke="#17171a" stroke-width="37.5" stroke-linecap="round"><path d="M72 170Q42 182 42 210"/><path d="M72 170Q42 182 42 210" transform="matrix(-1 0 0 1 240 0)"/></g><g class="open"><circle cx="42" cy="216" r="20" fill="#17171a"/><circle cx="198" cy="216" r="20" fill="#17171a"/></g><g class="closed"><circle cx="42" cy="218" r="22.5" fill="#17171a"/><circle cx="198" cy="218" r="22.5" fill="#17171a"/></g>
+<g class="open"><ellipse cx="42" cy="223" rx="10" ry="6" fill="#7b716a"/><ellipse cx="198" cy="223" rx="10" ry="6" fill="#7b716a"/><g fill="none" stroke="#a89d93" stroke-width="2.4" stroke-linecap="round"><path d="M32 227l1-11M42 229v-13M52 227l-1-11"/><path d="M32 227l1-11M42 229v-13M52 227l-1-11" transform="matrix(-1 0 0 1 240 0)"/></g></g>
+<g class="closed" fill="none" stroke="#a89d93" stroke-width="2.6" stroke-linecap="round"><path d="M27 214q15 8 30 0M28 224q14 8 28 0"/><path d="M27 214q15 8 30 0M28 224q14 8 28 0" transform="matrix(-1 0 0 1 240 0)"/></g>
+<path d="M58 108C56 80 78 56 104 47C112 33 128 33 136 47C162 56 184 80 182 108C182 140 156 160 120 160C84 160 58 140 58 108Z" fill="url(#gk)" stroke="#5d5d66" stroke-width="1.4"/>
+<ellipse cx="120" cy="60" rx="22" ry="9" fill="#fff" opacity=".07"/>
+<path class="rw rb" d="M62 82Q120 40 178 82" fill="none" stroke="#06E113" stroke-width="9" stroke-linecap="round"/><path class="rw rs" d="M120.0 52.5L121.9 57.4L127.1 57.7L123.0 61.0L124.4 66.1L120.0 63.2L115.6 66.1L117.0 61.0L112.9 57.7L118.1 57.4Z" fill="#ffd54a" stroke="#c99a00" stroke-width=".8" stroke-linejoin="round"/><g class="rw rm"><path d="M108 164L120 180L132 164" fill="none" stroke="#06E113" stroke-width="5" stroke-linejoin="round"/><circle cx="120" cy="186" r="9" fill="#ffd54a" stroke="#c99a00" stroke-width="1.2"/><circle cx="120" cy="186" r="5" fill="none" stroke="#c99a00" stroke-width="1"/></g><path class="rw rc" d="M99 51L99 32L110 41L120 28L130 41L141 32L141 51Z" fill="#ffd54a" stroke="#c99a00" stroke-width="1.2" stroke-linejoin="round"/>
+<path d="M120 101C112 90 90 88 82 101C72 115 76 140 94 150C106 157 134 157 146 150C164 140 168 115 158 101C150 88 128 90 120 101Z" fill="url(#gf)"/>
+<ellipse cx="120" cy="134" rx="28" ry="20" fill="url(#gm2)"/>
+<g class="eye"><g class="lid"><ellipse cx="98" cy="109" rx="7" ry="7.4" fill="#fff"/><g class="iris"><circle cx="98.4" cy="109.8" r="4.8" fill="#0b0b0d"/><circle cx="100" cy="107.6" r="1.8" fill="#fff"/><circle cx="96.8" cy="111.8" r=".9" fill="#fff"/></g></g></g><g class="eye"><g class="lid"><ellipse cx="142" cy="109" rx="7" ry="7.4" fill="#fff"/><g class="iris"><circle cx="142.4" cy="109.8" r="4.8" fill="#0b0b0d"/><circle cx="144" cy="107.6" r="1.8" fill="#fff"/><circle cx="140.8" cy="111.8" r=".9" fill="#fff"/></g></g></g>
+<path d="M82 101Q97 90 114 102" fill="none" stroke="#0e0e10" stroke-width="8" stroke-linecap="round"/><path d="M126 102Q143 90 158 101" fill="none" stroke="#0e0e10" stroke-width="8" stroke-linecap="round"/>
+<path class="shut" d="M89.5 110q8.5 6 17 0" fill="none" stroke="#2a2420" stroke-width="2.6" stroke-linecap="round" style="opacity:0"/><path class="shut" d="M133.5 110q8.5 6 17 0" fill="none" stroke="#2a2420" stroke-width="2.6" stroke-linecap="round" style="opacity:0"/>
+<ellipse cx="120" cy="124" rx="16" ry="8" fill="#3a3430"/><ellipse cx="113" cy="124.5" rx="3" ry="3.8" fill="#0b0b0d" transform="rotate(18 113 124.5)"/><ellipse cx="127" cy="124.5" rx="3" ry="3.8" fill="#0b0b0d" transform="rotate(-18 127 124.5)"/>
+<path id="mouth" d="M104 138Q120 146 136 137" fill="none" stroke="#3a2f2a" stroke-width="2.8" stroke-linecap="round"/>
+<ellipse id="mo" cx="120" cy="140" rx="2.5" ry="2.5" fill="url(#mg)" stroke="#1a0a0a" stroke-width="2" style="opacity:0"/>
+<g class="np npa"><path d="M84 168Q90 144 110 130" fill="none" stroke="#5d5d66" stroke-width="21" stroke-linecap="round"/><path d="M84 168Q90 144 110 130" fill="none" stroke="#17171a" stroke-width="18.5" stroke-linecap="round"/><circle cx="112" cy="128" r="12.5" fill="#5d5d66"/><circle cx="112" cy="128" r="11" fill="#17171a"/><ellipse cx="112" cy="132" rx="6" ry="4" fill="#7b716a"/></g><g class="np npb" transform="matrix(-1 0 0 1 240 0)"><path d="M84 168Q90 144 110 130" fill="none" stroke="#5d5d66" stroke-width="21" stroke-linecap="round"/><path d="M84 168Q90 144 110 130" fill="none" stroke="#17171a" stroke-width="18.5" stroke-linecap="round"/><circle cx="112" cy="128" r="12.5" fill="#5d5d66"/><circle cx="112" cy="128" r="11" fill="#17171a"/><ellipse cx="112" cy="132" rx="6" ry="4" fill="#7b716a"/></g>
 <g style="pointer-events:none">
-<ellipse class="z" data-z="fl" cx="84" cy="234" rx="27" ry="17"/><ellipse class="z" data-z="fr" cx="156" cy="234" rx="27" ry="17"/>
-<ellipse class="z" data-z="hips" cx="120" cy="216" rx="46" ry="14"/>
-<ellipse class="z" data-z="belly" cx="120" cy="196" rx="34" ry="30"/>
-<ellipse class="z" data-z="chest" cx="120" cy="158" rx="46" ry="10"/>
-<path d="M74 156Q52 176 52 206" class="z" data-z="arms" style="fill:none;stroke-width:28;stroke-linecap:round;stroke-opacity:.6"/><path d="M74 156Q52 176 52 206" transform="matrix(-1 0 0 1 240 0)" class="z" data-z="arms" style="fill:none;stroke-width:28;stroke-linecap:round;stroke-opacity:.6"/><g class="open"><circle cx="52" cy="212" r="14.5" class="z" data-z="arms"/><circle cx="188" cy="212" r="14.5" class="z" data-z="arms"/></g><g class="closed"><circle cx="52" cy="214" r="17" class="z" data-z="arms"/><circle cx="188" cy="214" r="17" class="z" data-z="arms"/></g>
-<ellipse class="z" data-z="head" cx="120" cy="100" rx="60" ry="53"/><circle class="z" data-z="head" cx="70" cy="52" r="19"/><circle class="z" data-z="head" cx="170" cy="52" r="19"/>
-<circle class="z lt" data-z="g1" cx="34" cy="62" r="9"/><circle class="z lt" data-z="g2" cx="120" cy="14" r="9"/><circle class="z lt" data-z="g3" cx="206" cy="62" r="9"/>
+<ellipse class="z" data-z="fl" cx="86" cy="237" rx="25" ry="15"/><ellipse class="z" data-z="fr" cx="154" cy="237" rx="25" ry="15"/>
+<ellipse class="z" data-z="hips" cx="120" cy="222" rx="54" ry="14"/>
+<ellipse class="z" data-z="belly" cx="120" cy="201" rx="34" ry="28"/>
+<ellipse class="z" data-z="chest" cx="120" cy="170" rx="54" ry="9"/>
+<path d="M72 170Q42 182 42 210" class="z" data-z="arms" style="fill:none;stroke-width:38;stroke-linecap:round;stroke-opacity:.6"/><path d="M72 170Q42 182 42 210" transform="matrix(-1 0 0 1 240 0)" class="z" data-z="arms" style="fill:none;stroke-width:38;stroke-linecap:round;stroke-opacity:.6"/><g class="open"><circle cx="42" cy="216" r="20" class="z" data-z="arms"/><circle cx="198" cy="216" r="20" class="z" data-z="arms"/></g><g class="closed"><circle cx="42" cy="218" r="22.5" class="z" data-z="arms"/><circle cx="198" cy="218" r="22.5" class="z" data-z="arms"/></g>
+<ellipse class="z" data-z="head" cx="120" cy="104" rx="62" ry="54"/><ellipse class="z" data-z="head" cx="58" cy="112" rx="10" ry="13"/><ellipse class="z" data-z="head" cx="182" cy="112" rx="10" ry="13"/>
+<circle class="z lt" data-z="g1" cx="30" cy="70" r="9"/><circle class="z lt" data-z="g2" cx="120" cy="16" r="9"/><circle class="z lt" data-z="g3" cx="210" cy="70" r="9"/>
 </g>
 </g>
 <g id="grassF"><path d="M-4 262L-4 250L-1 245 L2 250L5 243 L8 250L11 244 L14 250L17 243 L20 250L23 243 L26 250L29 246 L32 250L35 246 L38 250L41 241 L44 250L47 245 L50 250L53 245 L56 250L59 241 L62 250L65 244 L68 250L71 241 L74 250L77 244 L80 250L83 243 L86 250L89 246 L92 250L95 243 L98 250L101 241 L104 250L107 243 L110 250L113 242 L116 250L119 242 L122 250L125 246 L128 250L131 242 L134 250L137 243 L140 250L143 245 L146 250L149 246 L152 250L155 241 L158 250L161 244 L164 250L167 242 L170 250L173 241 L176 250L179 242 L182 250L185 241 L188 250L191 244 L194 250L197 242 L200 250L203 244 L206 250L209 241 L212 250L215 241 L218 250L221 246 L224 250L227 246 L230 250L233 245 L236 250L239 241 L242 250L245 244 L248 250L244 262Z" fill="#3a9447" opacity="1"/></g>
@@ -223,20 +344,20 @@ svg.p{width:100%;max-width:320px;height:auto;display:block;margin:0 auto}
 </div><button class="go" id="go">Start</button></div>
 </div>
 <div class="game hide" id="game"></div>
-<div class="tabs" id="cat" role="tablist"></div>
-<div class="list" id="ex"></div>
-</main>
+<div class="intro" id="intro"></div>
+</div>
+</div>
 <script>
 var EX=[
-{c:0,n:"Ruhig",d:"Länger aus- als einatmen beruhigt Körper und Geist.",i:"Setz dich aufrecht an einen ruhigen Ort und lass die Schultern sinken. Atme durch die Nase ein und langsam durch den Mund aus. Folge dem Panda: Beim Einatmen hebt er sich, schließt die Augen und öffnet den Mund rund, beim Ausatmen sinkt er wieder zurück.",s:[["Einatmen",4,1],["Ausatmen",6,0]]},
-{c:0,n:"Box",d:"Gleich lange Phasen schaffen Klarheit und Fokus.",i:"Setz dich bequem an einen ruhigen Ort. Atme vier Sekunden ein, halte vier Sekunden die Luft an, atme vier Sekunden aus und halte wieder vier Sekunden inne. Der Panda zeigt dir jede Phase und zählt mit.",s:[["Einatmen",4,1],["Halten",4,1],["Ausatmen",4,0],["Halten",4,0]]},
+{c:0,n:"Ruhig",d:"Länger aus- als einatmen beruhigt Körper und Geist.",i:"Setz dich aufrecht an einen ruhigen Ort und lass die Schultern sinken. Atme durch die Nase ein und langsam durch den Mund aus. Folge dem Gorilla: Beim Einatmen hebt er sich, schließt die Augen und öffnet den Mund rund, beim Ausatmen sinkt er wieder zurück.",s:[["Einatmen",4,1],["Ausatmen",6,0]]},
+{c:0,n:"Box",d:"Gleich lange Phasen schaffen Klarheit und Fokus.",i:"Setz dich bequem an einen ruhigen Ort. Atme vier Sekunden ein, halte vier Sekunden die Luft an, atme vier Sekunden aus und halte wieder vier Sekunden inne. Der Gorilla zeigt dir jede Phase und zählt mit.",s:[["Einatmen",4,1],["Halten",4,1],["Ausatmen",4,0],["Halten",4,0]]},
 {c:0,n:"4-7-8",d:"Hilft beim Abschalten, zum Beispiel vor dem Schlafen.",i:"Setz oder leg dich an einen ruhigen Ort. Atme vier Sekunden ein, halte sieben Sekunden die Luft an und atme acht Sekunden lang aus. Atme nie gegen Unwohlsein an: Wenn es dir zu lang wird, mach eine Pause und atme normal weiter.",s:[["Einatmen",4,1],["Halten",7,1],["Ausatmen",8,0]]},
-{c:0,n:"Kampfsport",k:1,d:"Kraftvolle Bauchatmung wie im Karate. Gibt Fokus und Energie vor dem Training.",i:"Stell dich hüftbreit hin oder setz dich aufrecht hin, so wie vor einem Training oder Wettkampf. Atme vier Sekunden ruhig durch die Nase tief in den Bauch ein und halte dann zwei Sekunden die Spannung. Danach atmest du vier Sekunden kraftvoll und zischend durch den Mund aus und spannst dabei Bauch und Fäuste fest an. Zum Schluss lässt du eine Sekunde alles locker. Der Panda macht es dir vor und ballt bei der Kraft-Ausatmung die Fäuste. Wenn dir schwindelig wird, hör auf und atme normal weiter.",s:[["Einatmen",4,1],["Halten",2,1],["Kraft-Ausatmen",4,0],["Pause",1,0]]},
-{c:0,n:"Wechselatmung",nose:1,alt:1,d:"Abwechselnd durch ein Nasenloch atmen. Bringt Balance und Ruhe.",i:"Setz dich aufrecht hin. Mit dem Daumen der rechten Hand verschließt du sanft das rechte Nasenloch, mit dem Ringfinger das linke. Der Panda zeigt mit seiner Pfote, welches Nasenloch gerade zu ist, und spiegelt dich dabei: Seine rechte Seite ist auf dem Bildschirm links. Du atmest links ein, rechts aus, rechts ein und links aus, immer vier Sekunden lang und nur durch die Nase. Atme nie mit Kraft. Bei verstopfter Nase oder Schwindel lass die Übung aus oder atme ohne Finger.",s:[["Links einatmen",4,1],["Rechts ausatmen",4,0],["Rechts einatmen",4,1],["Links ausatmen",4,0]]},
+{c:0,n:"Kampfsport",k:1,d:"Kraftvolle Bauchatmung wie im Karate. Gibt Fokus und Energie vor dem Training.",i:"Stell dich hüftbreit hin oder setz dich aufrecht hin, so wie vor einem Training oder Wettkampf. Atme vier Sekunden ruhig durch die Nase tief in den Bauch ein und halte dann zwei Sekunden die Spannung. Danach atmest du vier Sekunden kraftvoll und zischend durch den Mund aus und spannst dabei Bauch und Fäuste fest an. Zum Schluss lässt du eine Sekunde alles locker. Der Gorilla macht es dir vor und ballt bei der Kraft-Ausatmung die Fäuste. Wenn dir schwindelig wird, hör auf und atme normal weiter.",s:[["Einatmen",4,1],["Halten",2,1],["Kraft-Ausatmen",4,0],["Pause",1,0]]},
+{c:0,n:"Wechselatmung",nose:1,alt:1,d:"Abwechselnd durch ein Nasenloch atmen. Bringt Balance und Ruhe.",i:"Setz dich aufrecht hin. Mit dem Daumen der rechten Hand verschließt du sanft das rechte Nasenloch, mit dem Ringfinger das linke. Der Gorilla zeigt mit seiner Hand, welches Nasenloch gerade zu ist, und spiegelt dich dabei: Seine rechte Seite ist auf dem Bildschirm links. Du atmest links ein, rechts aus, rechts ein und links aus, immer vier Sekunden lang und nur durch die Nase. Atme nie mit Kraft. Bei verstopfter Nase oder Schwindel lass die Übung aus oder atme ohne Finger.",s:[["Links einatmen",4,1],["Rechts ausatmen",4,0],["Rechts einatmen",4,1],["Links ausatmen",4,0]]},
 {c:0,n:"Bienenatem",nose:1,d:"Beim Ausatmen summen. Wirkt sehr entspannend.",i:"Setz dich aufrecht hin und schließe den Mund. Atme vier Sekunden durch die Nase ein und summe beim langen Ausatmen leise wie eine Biene. Spüre das Kribbeln im Gesicht und im Kopf. Wenn du magst, legst du die Zeigefinger leicht auf die Ohren. Bei Schwindel oder Ohrenschmerzen hör auf.",s:[["Einatmen",4,1],["Summen 🎵",8,0]]},
 {c:0,n:"Löwenatem",nose:1,lion:1,d:"Mund weit auf, Zunge raus. Löst Spannung im Gesicht.",i:"Atme drei Sekunden ruhig durch die Nase ein. Dann reißt du den Mund weit auf, streckst die Zunge heraus und atmest mit einem lauten Hauch aus, wie ein Löwe. Das lockert Kiefer und Gesicht und macht Spaß. Wiederhole das fünf bis zehn Mal. Bei Schwindel hör auf und atme normal weiter.",s:[["Einatmen",3,1],["Löwe! 🦁",3,0]]},
 {c:0,n:"Eigene Übung",custom:1,d:"Stell deinen Atemrhythmus selbst ein.",i:"Stell mit den Reglern ein, wie lange du einatmest, ausatmest und die Luft anhältst. Fang mit ruhigen Werten an, zum Beispiel 4 Sekunden ein und 6 Sekunden aus. Wenn dir schwindelig wird, hör auf und atme normal weiter.",s:[["Einatmen",4,1],["Ausatmen",6,0]]},
-{c:1,n:"Body-Scan",d:"Körper Stück für Stück wahrnehmen und entspannen. Dauer ca. 1,5 Minuten.",i:"Setz oder leg dich an einen ruhigen Ort, an dem du die nächsten Minuten ungestört bist. Schließe die Augen, wenn du magst. Der Panda führt deine Aufmerksamkeit Schritt für Schritt von den Füßen bis zum Kopf. Der leuchtende Körperteil zeigt, wo du gerade hinspüren sollst.",g:[["Ankommen","Setz oder leg dich bequem hin. Schließe die Augen, wenn du magst.","",8],
+{c:1,n:"Body-Scan",d:"Körper Stück für Stück wahrnehmen und entspannen. Dauer ca. 1,5 Minuten.",i:"Setz oder leg dich an einen ruhigen Ort, an dem du die nächsten Minuten ungestört bist. Schließe die Augen, wenn du magst. Der Gorilla führt deine Aufmerksamkeit Schritt für Schritt von den Füßen bis zum Kopf. Der leuchtende Körperteil zeigt, wo du gerade hinspüren sollst.",g:[["Ankommen","Setz oder leg dich bequem hin. Schließe die Augen, wenn du magst.","",8],
 ["Füße","Spüre deine Füße. Lass sie schwer und warm werden.","feet",12],
 ["Beine & Becken","Spüre deine Beine und dein Becken. Lass die Spannung los.","hips",12],
 ["Bauch","Spüre deinen Bauch. Er hebt und senkt sich mit dem Atem.","belly",12],
@@ -244,7 +365,7 @@ var EX=[
 ["Arme & Hände","Spüre deine Arme und Hände. Lass sie ganz locker werden.","arms",12],
 ["Gesicht & Kopf","Entspanne Kiefer, Augen und Stirn.","head",12],
 ["Ganzer Körper","Spüre deinen ganzen Körper. Atme ruhig weiter.","all",12]]},
-{c:1,n:"Muskelentspannung",d:"Muskeln kurz anspannen und loslassen. Dauer ca. 1,5 Minuten.",i:"Setz oder leg dich an einen ruhigen Ort. Du spannst nacheinander einzelne Muskelgruppen für wenige Sekunden an und lässt dann bewusst los. Wenn der Panda kleiner und fest wird, spannst du an, wenn er weich wird, lässt du los. Spanne nur so stark an, dass es nicht schmerzt.",g:[["Ankommen","Setz oder leg dich bequem hin. Gleich spannst du nacheinander Muskeln an und lässt wieder los.","",6],
+{c:1,n:"Muskelentspannung",d:"Muskeln kurz anspannen und loslassen. Dauer ca. 1,5 Minuten.",i:"Setz oder leg dich an einen ruhigen Ort. Du spannst nacheinander einzelne Muskelgruppen für wenige Sekunden an und lässt dann bewusst los. Wenn der Gorilla kleiner und fest wird, spannst du an, wenn er weich wird, lässt du los. Spanne nur so stark an, dass es nicht schmerzt.",g:[["Ankommen","Setz oder leg dich bequem hin. Gleich spannst du nacheinander Muskeln an und lässt wieder los.","",6],
 ["Anspannen","Balle beide Fäuste fest und spanne die Arme an.","arms",5,"t"],
 ["Loslassen","Lass los. Spüre, wie Arme und Hände schwer werden.","arms",8],
 ["Anspannen","Zieh die Schultern fest Richtung Ohren.","chest",5,"t"],
@@ -263,12 +384,12 @@ var EX=[
 ["2 · 👃 Riechen","Nenne 2 Dinge, die du riechst.","head",15],
 ["1 · 👅 Schmecken","Nenne 1 Sache, die du schmeckst.","head",15],
 ["Hier und Jetzt","Atme tief durch. Du bist ganz im Hier und Jetzt.","all",8]]},
-{c:2,n:"Dankbarkeit",d:"Drei Lichter der Dankbarkeit. Dauer ca. 1 Minute.",i:"Setz dich an einen ruhigen Ort und atme ein paar Mal tief durch. Mit jedem Licht, das über dem Panda aufsteigt, denkst du an etwas, wofür du dankbar bist. Lass dir Zeit, es gibt kein Richtig oder Falsch.",g:[["Ankommen","Atme ruhig ein und aus. Gleich lässt du drei Lichter der Dankbarkeit aufsteigen.","",8],
+{c:2,n:"Dankbarkeit",d:"Drei Lichter der Dankbarkeit. Dauer ca. 1 Minute.",i:"Setz dich an einen ruhigen Ort und atme ein paar Mal tief durch. Mit jedem Licht, das über dem Gorilla aufsteigt, denkst du an etwas, wofür du dankbar bist. Lass dir Zeit, es gibt kein Richtig oder Falsch.",g:[["Ankommen","Atme ruhig ein und aus. Gleich lässt du drei Lichter der Dankbarkeit aufsteigen.","",8],
 ["Licht 1","Denke an etwas Schönes, das heute passiert ist.","g1",16],
 ["Licht 2","Denke an einen Menschen, für den du dankbar bist.","g1,g2",16],
 ["Licht 3","Denke an etwas an dir selbst, worauf du stolz bist.","g1,g2,g3",16],
 ["Wärme","Spüre die Wärme in dir. Atme ruhig weiter.","all",10]]},
-{c:2,n:"Mini-Pause",d:"Eine Minute für zwischendurch.",i:"Du brauchst dafür keinen besonderen Ort. Ob am Schreibtisch, nach dem Training oder vor einem Termin: Halte kurz inne und folge dem Panda eine Minute lang. Du darfst dabei sitzen oder stehen.",g:[["Innehalten","Halte kurz inne. Lass die Schultern sinken.","chest",10],
+{c:2,n:"Mini-Pause",d:"Eine Minute für zwischendurch.",i:"Du brauchst dafür keinen besonderen Ort. Ob am Schreibtisch, nach dem Training oder vor einem Termin: Halte kurz inne und folge dem Gorilla eine Minute lang. Du darfst dabei sitzen oder stehen.",g:[["Innehalten","Halte kurz inne. Lass die Schultern sinken.","chest",10],
 ["Atmen","Atme tief durch die Nase ein und lang durch den Mund aus.","belly",20],
 ["Kiefer & Stirn","Löse deinen Kiefer und glätte deine Stirn.","head",10],
 ["Arme lockern","Schüttle Arme und Hände locker aus.","arms",10],
@@ -277,8 +398,8 @@ var EX=[
 {c:6,n:"Bambus-Memory",game:"mem",d:"Finde alle Paare mit möglichst wenigen Zügen. Trainiert Merkfähigkeit. Dauer ca. 1 Minute.",i:"Decke zwei Karten auf und finde alle Paare. Merk dir, wo welches Symbol liegt, und versuch es mit möglichst wenigen Zügen zu schaffen. Atme dabei ruhig. Such dir einen Schwierigkeitsgrad aus. Deinen besten Wert speichert die App auf diesem Gerät."},
 {c:6,n:"Atem-Takt",game:"tak",d:"Tippe, wenn der Ring den Kreis trifft. Trainiert Rhythmus und Ruhe. Dauer ca. 1 Minute.",i:"Ein Ring zieht sich langsam zusammen. Tippe genau in dem Moment, in dem er den grünen Kreis trifft. Atme dabei ruhig im Takt des Rings. Pro Runde gibt es bis zu 3 Punkte, insgesamt 8 Runden. Such dir ein Tempo aus."},
 {c:6,n:"Anderes Blatt",game:"find",d:"Finde das Symbol, das nicht passt. Trainiert Aufmerksamkeit. Dauer ca. 1 Minute.",i:"Auf dem Feld liegen lauter gleiche Symbole, nur eins ist anders. Finde es so schnell du kannst. Du spielst sechs Runden, die Zeit läuft die ganze Zeit mit. Lass den Blick weich über das Feld wandern, statt jedes Feld einzeln abzusuchen."},
-{c:6,n:"Reihenfolge",game:"seq",d:"Merk dir die Folge und wiederhole sie. Trainiert das Arbeitsgedächtnis. Dauer ca. 1 Minute.",i:"Der Panda zeigt dir eine Folge von Symbolen mit Tönen. Wiederhole sie in derselben Reihenfolge. Mit jeder Runde wird sie um ein Symbol länger. Schaffst du eine Folge von 6, hast du gewonnen. Such dir ein Tempo aus."},
-{c:3,n:"Komplett",d:"Wasser, Dehnen, Liegestütze und Tagesziel. Dauer ca. 3 Minuten.",i:"Starte deinen Tag in etwa drei Minuten: ein Glas Wasser trinken, den Körper dehnen, ein paar Liegestütze machen und ein Tagesziel setzen. Such dir einen Platz mit etwas Raum, am besten mit Platz für Liegestütze auf dem Boden. Der Panda macht jeden Schritt mit dir.",g:[["🥛 Glas füllen","Fülle ein Glas mit 250 ml Wasser.","",8,"",""],
+{c:6,n:"Reihenfolge",game:"seq",d:"Merk dir die Folge und wiederhole sie. Trainiert das Arbeitsgedächtnis. Dauer ca. 1 Minute.",i:"Der Gorilla zeigt dir eine Folge von Symbolen mit Tönen. Wiederhole sie in derselben Reihenfolge. Mit jeder Runde wird sie um ein Symbol länger. Schaffst du eine Folge von 6, hast du gewonnen. Such dir ein Tempo aus."},
+{c:3,n:"Komplett",d:"Wasser, Dehnen, Liegestütze und Tagesziel. Dauer ca. 3 Minuten.",i:"Starte deinen Tag in etwa drei Minuten: ein Glas Wasser trinken, den Körper dehnen, ein paar Liegestütze machen und ein Tagesziel setzen. Such dir einen Platz mit etwas Raum, am besten mit Platz für Liegestütze auf dem Boden. Der Gorilla macht jeden Schritt mit dir.",g:[["🥛 Glas füllen","Fülle ein Glas mit 250 ml Wasser.","",8,"",""],
 ["💧 Trinken","Trinke das Glas in kleinen Schlucken aus. Spüre, wie das Wasser deinen Körper weckt.","belly",20,"","m"],
 ["Durchatmen","Atme einmal tief durch. Dein Körper ist startklar.","all",8,"",""],
 ["Aufrichten","Stell dich hüftbreit hin und lass die Arme hängen.","",6,"",""],
@@ -293,10 +414,10 @@ var EX=[
 ["Was ist wichtig?","Frag dich: Was ist heute wirklich wichtig für mich?","head",14,"","c"],
 ["Dein Tagesziel","Formuliere in Gedanken einen Satz: Heute möchte ich ...","head",16,"","c"],
 ["Los geht's","Atme tief durch. Du startest klar in den Tag.","all",8,"",""]]},
-{c:3,n:"Glas Wasser",d:"250 ml Wasser zum Start. Dauer ca. 40 Sekunden.",i:"Stell dir ein Glas mit 250 ml Wasser bereit, am besten mit Zimmertemperatur. Nach dem Aufstehen bringt Wasser deinen Kreislauf in Schwung. Trink in kleinen Schlucken, der Panda trinkt mit.",g:[["🥛 Glas füllen","Fülle ein Glas mit 250 ml Wasser.","",8,"",""],
+{c:3,n:"Glas Wasser",d:"250 ml Wasser zum Start. Dauer ca. 40 Sekunden.",i:"Stell dir ein Glas mit 250 ml Wasser bereit, am besten mit Zimmertemperatur. Nach dem Aufstehen bringt Wasser deinen Kreislauf in Schwung. Trink in kleinen Schlucken, der Gorilla trinkt mit.",g:[["🥛 Glas füllen","Fülle ein Glas mit 250 ml Wasser.","",8,"",""],
 ["💧 Trinken","Trinke das Glas in kleinen Schlucken aus. Spüre, wie das Wasser deinen Körper weckt.","belly",20,"","m"],
 ["Durchatmen","Atme einmal tief durch. Dein Körper ist startklar.","all",8,"",""]]},
-{c:3,n:"Liegestütze",d:"10 langsame Liegestütze im Takt. Dauer ca. 1 Minute.",i:"Such dir einen Platz auf dem Boden mit etwas Raum. Du machst zehn langsame Liegestütze im Takt des Pandas: zwei Sekunden runter, zwei Sekunden hoch. Wenn es zu schwer ist, stütze dich auf die Knie. Bei Schmerzen in Schultern oder Handgelenken hör auf.",g:[["Vorbereiten","Geh in die Liegestützposition: Hände unter den Schultern, Körper gerade. Du kannst auch die Knie abstellen.","arms",10,"",""],
+{c:3,n:"Liegestütze",d:"10 langsame Liegestütze im Takt. Dauer ca. 1 Minute.",i:"Such dir einen Platz auf dem Boden mit etwas Raum. Du machst zehn langsame Liegestütze im Takt des Gorillas: zwei Sekunden runter, zwei Sekunden hoch. Wenn es zu schwer ist, stütze dich auf die Knie. Bei Schmerzen in Schultern oder Handgelenken hör auf.",g:[["Vorbereiten","Geh in die Liegestützposition: Hände unter den Schultern, Körper gerade. Du kannst auch die Knie abstellen.","arms",10,"",""],
 ["Liegestütze","Langsam runter, kraftvoll hoch. Beim Hochdrücken atmest du aus.","arms",40,"p",""],
 ["Ausschütteln","Schüttle Arme und Schultern locker aus. Gut gemacht!","all",8,"",""]]},
 {c:3,n:"Dehnen",d:"Schultern, Rücken und Arme aufwecken. Dauer ca. 50 Sekunden.",i:"Stell dich hüftbreit hin, am besten mit etwas Platz um dich herum. Du weckst Schultern, Rücken und Arme mit sanften Dehnungen. Dehne nur so weit, dass es angenehm bleibt.",g:[["Aufrichten","Stell dich hüftbreit hin und lass die Arme hängen.","",6,"",""],
@@ -308,7 +429,7 @@ var EX=[
 ["Was ist wichtig?","Frag dich: Was ist heute wirklich wichtig für mich?","head",14,"","c"],
 ["Dein Tagesziel","Formuliere in Gedanken einen Satz: Heute möchte ich ...","head",16,"","c"],
 ["Los geht's","Atme tief durch. Du startest klar in den Tag.","all",8,"",""]]},
-{c:2,n:"Gedankenwolken",d:"Gedanken wie Wolken vorbeiziehen lassen. Dauer ca. 1,5 Minuten.",i:"Setz dich bequem hin und schau dem Panda zu, wie er den Himmel beobachtet. Gedanken sind wie Wolken: Sie kommen und gehen. Du musst sie nicht festhalten oder wegschieben, nur bemerken und vorbeiziehen lassen.",g:[["Ankommen","Setz dich bequem hin und atme ein paar Mal ruhig ein und aus.","",8,"","e"],
+{c:2,n:"Gedankenwolken",d:"Gedanken wie Wolken vorbeiziehen lassen. Dauer ca. 1,5 Minuten.",i:"Setz dich bequem hin und schau dem Gorilla zu, wie er den Himmel beobachtet. Gedanken sind wie Wolken: Sie kommen und gehen. Du musst sie nicht festhalten oder wegschieben, nur bemerken und vorbeiziehen lassen.",g:[["Ankommen","Setz dich bequem hin und atme ein paar Mal ruhig ein und aus.","",8,"","e"],
 ["Der Himmel","Stell dir einen weiten Himmel vor. Dein Kopf ist dieser Himmel.","head",14,"","ke"],
 ["Gedanken bemerken","Jeder Gedanke, der auftaucht, ist eine Wolke. Bemerke ihn, ohne ihn festzuhalten.","head",20,"","ke"],
 ["Wolken ziehen lassen","Sieh zu, wie die Wolke vorbeizieht. Du musst nichts tun und nichts bewerten.","head",24,"","ke"],
@@ -363,23 +484,54 @@ function fmt(s){return s<75?"ca. "+Math.max(10,Math.round(s/10)*10)+" Sek.":"ca.
 function dur(e){return e.game?"ca. 1 Min.":e.g?fmt(e.g.reduce(function(a,x){return a+x[3]},0)):"1–5 Min."}
 function mk(tag,cls,txt){var el=document.createElement(tag);if(cls)el.className=cls;if(txt!==undefined)el.textContent=txt;return el}
 function idle(){if(!run){$("count").className="count";$("count").textContent=EX[ei].n+" · "+dur(EX[ei])}}
-function draw(){
-var T=$("cat"),L=$("ex");T.innerHTML="";L.innerHTML="";
-CAT.forEach(function(c,i){var b=mk("button","tab");b.setAttribute("role","tab");b.setAttribute("aria-selected",i===ci);b.appendChild(mk("span","",c.ic));b.appendChild(document.createTextNode(c.n));
-b.onclick=function(){if(run)return;ci=i;if(EX[ei].c!==i)ei=EX.findIndex(function(e){return e.c===i});draw()};T.appendChild(b)});
-EX.forEach(function(e,i){if(e.c!==ci)return;var b=mk("button","ex"),t=mk("span","exh");b.setAttribute("aria-pressed",i===ei);
-t.appendChild(mk("b","",e.n));t.appendChild(mk("i","",dur(e)));b.appendChild(t);
-b.appendChild(mk("span","exd",e.d.replace(/\s*Dauer[^.]*\./,"")));if(i===ei)b.appendChild(mk("span","exi",e.i));
-b.onclick=function(){if(run)return;ei=i;draw()};L.appendChild(b)});
-chips("du",DU.map(function(m){return m+" Min"}),di,function(i){di=i;draw()});
+function refresh(){
+chips("du",DU.map(function(m){return m+" Min"}),di,function(i){di=i;refresh()});
 $("du").style.display=EX[ei].g?"none":"flex";$("cust").classList.toggle("hide",!EX[ei].custom);var gm=!!EX[ei].game;document.querySelector(".ctl").style.display=gm?"none":"";$("game").classList.toggle("hide",!gm);if(!gm){gStop();if(!run)$("phase").textContent="Bereit?"}if(gm)gameInit();idle()}
+var GOALS=[["rel","🧘","Entspannen","Abschalten und runterkommen"],["foc","🎯","Fokus","Klar im Kopf werden"],["slp","🌙","Schlafen","Ruhig in den Abend"],["eng","⚡","Energie","Wach und kraftvoll starten"]],GF="",curTab="home";
+var TAG={"Ruhig":"rel","Box":"foc","4-7-8":"rel slp","Kampfsport":"eng foc","Wechselatmung":"rel foc","Bienenatem":"rel slp","Löwenatem":"eng rel","Eigene Übung":"rel foc","Body-Scan":"rel slp","Muskelentspannung":"rel slp","5-4-3-2-1":"foc rel","Dankbarkeit":"rel","Mini-Pause":"foc rel","Gedankenwolken":"foc rel","Komplett:3":"eng foc","Glas Wasser":"eng","Liegestütze":"eng","Dehnen":"eng rel","Tagesziel":"foc eng","Komplett:4":"slp rel","Barfuß über den Rasen":"rel","Tagesrückblick":"rel slp","Einschlafen":"slp","Mentale Vorbereitung":"foc eng","Visualisierung":"foc","Cool-down":"rel"};
+function tg(e){return e.game?"foc":(TAG[e.n+":"+e.c]||TAG[e.n]||"")}
+var ICO={"Ruhig":"🌊","Box":"🔲","4-7-8":"🌙","Kampfsport":"🥋","Wechselatmung":"☯️","Bienenatem":"🐝","Löwenatem":"🦁","Eigene Übung":"🎚️","Body-Scan":"🧍","Muskelentspannung":"💪","5-4-3-2-1":"👀","Dankbarkeit":"🙏","Mini-Pause":"⏸️","Gedankenwolken":"☁️","Komplett:3":"☀️","Glas Wasser":"💧","Liegestütze":"🏋️","Dehnen":"🤸","Tagesziel":"🎯","Komplett:4":"🌙","Barfuß über den Rasen":"🌱","Tagesrückblick":"📖","Einschlafen":"😴","Mentale Vorbereitung":"🧠","Visualisierung":"✨","Cool-down":"❄️","Zahlenjagd":"🔢","Bambus-Memory":"🎋","Atem-Takt":"⭕","Anderes Blatt":"🍃","Reihenfolge":"🎵"};
+function ic(e){return ICO[e.n+":"+e.c]||ICO[e.n]||CAT[e.c].ic}
+function ttl(e){return e.n==="Komplett"?CAT[e.c].n+" komplett":e.n}
+function sd(e){return e.d.replace(/\s*Dauer[^.]*\./,"").replace(/\s*\d+(,\d+)?\s*(Minuten?|Sekunden?)\.$/,"")}
+function fi(n,c){return EX.findIndex(function(e){return e.n===n&&(c===undefined||e.c===c)})}
+function card(i){var e=EX[i],b=mk("button","xc"),m=mk("span","xm"),t=mk("span","xt",dur(e));
+b.appendChild(mk("span","xi",ic(e)));m.appendChild(mk("b","",ttl(e)));m.appendChild(mk("span","xd",sd(e)));b.appendChild(m);t.appendChild(mk("i","","▶"));b.appendChild(t);
+b.onclick=function(){openEx(i)};return b}
+function drawHome(){var h=new Date().getHours(),g=h<11?"Guten Morgen":h<18?"Guten Tag":"Guten Abend";
+$("hi").innerHTML=g+"<br><span>Atme durch.</span>";
+var i=h<11?fi("Komplett",3):h>=17?fi("Komplett",4):fi("Mini-Pause"),e=EX[i],lb=h<11?"Für deinen Morgen":h>=17?"Für deinen Abend":"Für zwischendurch",done=S.d.indexOf(ds(Date.now()))>=0;
+var H=$("hero");H.innerHTML="";var b=mk("button","hero2");b.appendChild(mk("small","",done?"Heute schon geübt ✓ · "+lb:lb));b.appendChild(mk("b","",ttl(e)));b.appendChild(mk("span","",sd(e)));b.appendChild(mk("em","","Jetzt starten · "+dur(e)));b.onclick=function(){openEx(i)};H.appendChild(b);
+var W=$("wk");W.innerHTML="";var n=new Date();n.setHours(12,0,0,0);var mo=new Date(n.getTime()-((n.getDay()+6)%7)*864e5),ln=["M","D","M","D","F","S","S"],td=ds(n.getTime());
+for(var k=0;k<7;k++){var dt=ds(mo.getTime()+k*864e5),w=mk("div","wd"+(S.d.indexOf(dt)>=0?" on":"")+(dt===td?" now":""));w.appendChild(mk("i","",S.d.indexOf(dt)>=0?"✓":""));w.appendChild(mk("span","",ln[k]));W.appendChild(w)}
+var Q=$("quick");Q.innerHTML="";["Mini-Pause","Ruhig","Box","5-4-3-2-1","Einschlafen"].forEach(function(nm){var j=fi(nm),x=EX[j],q=mk("button","qk");q.appendChild(mk("span","",ic(x)));q.appendChild(mk("b","",ttl(x)));q.appendChild(mk("small","",dur(x)));q.onclick=function(){openEx(j)};Q.appendChild(q)});
+var G=$("goals");G.innerHTML="";GOALS.forEach(function(x){var q=mk("button");q.appendChild(mk("span","",x[1]));q.appendChild(mk("b","",x[2]));q.appendChild(mk("small","xd",x[3]));q.onclick=function(){GF=x[0];tab("lib")};G.appendChild(q)})}
+function drawLib(){var F=$("gf"),L=$("lib");F.innerHTML="";L.innerHTML="";
+[["","Alle"]].concat(GOALS.map(function(x){return [x[0],x[1]+" "+x[2]]})).forEach(function(x){var b=mk("button","fc",x[1]);b.setAttribute("aria-pressed",GF===x[0]);b.onclick=function(){GF=x[0];drawLib()};F.appendChild(b)});
+CAT.forEach(function(c,ci2){if(ci2===6)return;var ids=[];EX.forEach(function(e,i){if(e.c===ci2&&(!GF||tg(e).indexOf(GF)>=0))ids.push(i)});if(!ids.length)return;
+var h=mk("h2","h2");h.appendChild(document.createTextNode(c.ic+" "+c.n));L.appendChild(h);ids.forEach(function(i){L.appendChild(card(i))})})}
+function drawGames(){var L=$("gm");L.innerHTML="";EX.forEach(function(e,i){if(e.c===6)L.appendChild(card(i))})}
+function drawProg(){var s=streak(),k=Math.max(S.best,s),T=$("tl");T.innerHTML="";
+[["🔥",s,"Tage Serie"],["🏆",k,"Beste Serie"],["🎋",S.b,"Bambus gesammelt"],["📅",S.d.length,"Übungstage"]].forEach(function(x){var d=mk("div");d.appendChild(mk("b","",x[0]+" "+x[1]));d.appendChild(mk("small","",x[2]));T.appendChild(d)});
+var R=$("rwl");R.innerHTML="";var ic=["🟢","⭐","🏅","👑"],ds2=["Ein grünes Stirnband","Ein goldener Stern","Eine Medaille","Eine Krone"];
+RW.forEach(function(r,i){var u=k>=r.d,d=mk("div","rwl"+(u?"":" lock")),m=mk("span");d.appendChild(mk("i","",ic[i]));m.appendChild(mk("b","",r.n+" · "+r.d+" Tage"));m.appendChild(mk("small","",u?"Freigeschaltet: "+ds2[i]:"Noch "+(r.d-k)+(r.d-k===1?" Tag":" Tage")+" Serie"));d.appendChild(m);R.appendChild(d)})}
+var TABS=["home","lib","games","prog"];
+function tab(n,keep){curTab=n;TABS.forEach(function(t){$("v"+t).classList.toggle("hide",t!==n);$("n"+t).setAttribute("aria-selected",t===n)});
+if(n==="home")drawHome();if(n==="lib")drawLib();if(n==="games")drawGames();if(n==="prog")drawProg();if(!keep)window.scrollTo(0,0)}
+function openEx(i){if(run)return;ei=i;var e=EX[i];$("pt").textContent=ttl(e);$("pd").textContent=dur(e);
+$("intro").innerHTML="";$("intro").appendChild(mk("h3","","So geht's"));$("intro").appendChild(mk("p","",e.i||e.d));
+$("conf").innerHTML="";$("sky").innerHTML="";var pp=document.querySelector(".pop");if(pp&&pp.parentNode)pp.parentNode.removeChild(pp);$("play").classList.remove("hide");document.body.classList.add("lock");$("play").scrollTop=0;refresh();
+try{history.pushState({p:1},"")}catch(x){}}
+function closeEx(fromPop){if(run)stop(false);gStop();$("play").classList.add("hide");document.body.classList.remove("lock");tab(curTab,true);
+if(!fromPop){try{if(history.state&&history.state.p)history.back()}catch(x){}}}
+window.addEventListener("popstate",function(){if(!$("play").classList.contains("hide"))closeEx(true)});
 var M=0,C=0,W=0,TW=0,TM=0,TC=0,PX=0,celRaf=0,lastCloud=-9;
 var CE={"Body-Scan":[1,2,3,4,5,6,7],"Muskelentspannung":[1,2,3,4,5,6,7,8,9,10,11],"5-4-3-2-1":[],"Dankbarkeit":[1,2,3,4],"Mini-Pause":[0,1]};
 var MB={"Body-Scan":[1,2,3,4,5,6,7],"Mini-Pause":[1]};
 EX.forEach(function(e){if(e.g)e.g.forEach(function(s,j){s[5]=(s[5]||"")+((CE[e.n]||[]).indexOf(j)>=0?"c":"")+((MB[e.n]||[]).indexOf(j)>=0?"m":"")})});
 function face(){
 var o=Math.min(1,M*6),rx=2.5+6.5*M,ry=2.5+8*M,e=$("mo"),i;
-e.setAttribute("rx",rx);e.setAttribute("ry",ry);e.setAttribute("cy",132+ry*.3);e.style.opacity=o;
+e.setAttribute("rx",rx);e.setAttribute("ry",ry);e.setAttribute("cy",137+ry*.45);e.style.opacity=o;
 $("mouth").style.opacity=1-o;
 var L=document.querySelectorAll(".lid"),I=document.querySelectorAll(".iris"),S=document.querySelectorAll(".shut");
 for(i=0;i<L.length;i++){var c=i===1?Math.max(C,W):C;L[i].style.transform="scaleY("+(1-.94*c)+")";L[i].style.opacity=1-Math.min(1,c*1.2)}
@@ -402,7 +554,7 @@ function applyRewards(){$("svg").classList.toggle("band",S.best>=3);$("svg").cla
 function stats(){var s=streak(),k=Math.max(S.best,s),nx=null,i;
 $("stB").textContent="🎋 "+S.b;$("stS").textContent="🔥 "+s+" "+(s===1?"Tag":"Tage");
 for(i=0;i<RW.length;i++){if(k<RW[i].d){nx=RW[i];break}}
-$("stG").textContent=nx?"Noch "+(nx.d-k)+(nx.d-k===1?" Tag":" Tage")+" Serie bis: "+nx.n+" für deinen Panda":"Alle Belohnungen freigeschaltet. Weiter so!"}
+$("stP").style.width=(nx?Math.min(100,Math.round(k/nx.d*100)):100)+"%";$("stG").textContent=nx?"Noch "+(nx.d-k)+(nx.d-k===1?" Tag":" Tage")+" Serie bis: "+nx.n+" für deinen Gorilla":"Alle Belohnungen freigeschaltet. Weiter so!"}
 function pop(t){var e=document.createElement("div");e.className="pop";e.textContent=t;document.querySelector(".stage").appendChild(e);setTimeout(function(){if(e.parentNode)e.parentNode.removeChild(e)},3200)}
 function reward(){var t=ds(Date.now()),old=S.best,msg="+1 🎋";
 if(S.d.indexOf(t)<0){S.d.push(t);S.d=S.d.slice(-90)}
@@ -527,10 +679,11 @@ function start(){gong();buzz(30);lp="";lj=-1;lpk=-1;lockC(true);cancelAnimationF
 function stop(done){run=false;lockC(false);cancelAnimationFrame(raf);$("go").textContent="Start";set(0);$("count").textContent="";$("count").className="count";zone("");TM=TC=PX=M=C=W=0;face();$("p").classList.remove("fist");$("svg").classList.remove("grass");$("svg").classList.remove("np1");$("svg").classList.remove("np2");$("sky").innerHTML="";$("prog").style.width="0";
 $("phase").textContent=done?"Gut gemacht 🌿":"Bereit?";idle();if(done){gong();buzz([80,60,80]);celebrate();reward()}}
 $("go").onclick=function(){run?stop(false):start()};
-function go(){$("land").classList.add("hide");$("app").classList.remove("hide");window.scrollTo(0,0);try{history.replaceState(null,"","#app")}catch(e){}}
-function info(){if(run)stop(false);$("app").classList.add("hide");$("land").classList.remove("hide");window.scrollTo(0,0);try{history.replaceState(null,"","#")}catch(e){}}
-custApply();optDraw();draw();set(0);applyRewards();stats();
-if(location.hash==="#app")go();
+function go(){$("land").classList.add("hide");$("app").classList.remove("hide");try{localStorage.setItem("bfit24-seen","1")}catch(e){}tab("home");try{history.replaceState(null,"","#app")}catch(e){}}
+function info(){if(!$("play").classList.contains("hide"))closeEx();if(run)stop(false);$("app").classList.add("hide");$("land").classList.remove("hide");window.scrollTo(0,0);try{history.replaceState(null,"","#")}catch(e){}}
+custApply();optDraw();refresh();set(0);applyRewards();stats();
+var seen=false;try{seen=!!localStorage.getItem("bfit24-seen")}catch(e){}
+if(location.hash==="#app"||seen)go();
 </script>
 </body>
 </html>
