@@ -230,9 +230,36 @@ body.lock{overflow:hidden}
 .wl{position:absolute;left:-12%;animation:wlf linear infinite}
 @keyframes wlf{from{left:-12%;transform:rotate(0)}to{left:112%;transform:rotate(540deg)}}
 @media (prefers-reduced-motion:reduce){.sund,.sunr,.stx,.wc,.rd,.sf,.fg,.wfl,.wl,.wx-sw,.wx-br{animation:none}.rd,.sf,.wl,.wx-br,.wx-sw{display:none}}
+.glogo{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 12px;color:var(--mute);font-weight:800;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.glogo svg{width:92px;height:19px}
+.gc .bk{width:78%;height:auto;display:block;margin:0 auto;opacity:.9}
+.gc.open .bk{display:none}
+.gq{grid-column:1/-1;text-align:center;font-weight:900;font-size:2rem;padding:14px 0 6px}
+.gq small{display:block;font-size:.8rem;color:var(--mute);font-weight:700;letter-spacing:.02em}
+.gb{aspect-ratio:auto!important;padding:16px 8px;font-size:1.3rem}
+.rkres{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:14px 0 6px;text-align:center}
+.rkres h3{margin:6px 0 2px;font-size:1.15rem}
+.rkres p{margin:0 0 10px;color:var(--mute);font-weight:700;font-size:.9rem}
+.rknm{display:flex;gap:8px;margin:0 0 12px}
+.rknm input{flex:1;min-width:0;background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-weight:700}
+.rkl{list-style:none;margin:0;padding:0;text-align:left}
+.rkl li{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;font-weight:700;font-size:.92rem}
+.rkl li:nth-child(odd){background:rgba(255,255,255,.04)}
+.rkl li.me{background:rgba(6,225,19,.16);outline:1px solid #06E113}
+.rkl b{width:1.8em;text-align:center}
+.rkl span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rkl em{font-style:normal;color:#06E113;font-weight:900}
+.rkl small{color:var(--mute);font-weight:600}
+.rkx{color:var(--mute);margin:10px 0}
+.rec{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin:6px 0 16px}
+.rec div{padding:8px 0;border-top:1px solid var(--line);font-size:.88rem}.rec div:first-of-type{border-top:0}
+.rec b{display:block;font-size:.95rem}.rec span{color:var(--mute);font-weight:600}
+.gbanner{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#0c1a0e,#101612);border:1px solid #1e3a22;border-radius:18px;padding:14px 16px;margin:0 0 14px}
+.gbanner svg{width:110px;height:23px;flex:none}.gbanner span{color:var(--mute);font-weight:700;font-size:.82rem;line-height:1.3}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lg24" viewBox="0 0 123 25.1"><path d="M5.20147 0.52832H18.4184C20.527 0.52832 22.1964 1.01493 23.4266 1.98633C24.6568 2.95956 25.2729 4.28818 25.2729 5.97583C25.2729 6.4916 25.2255 6.98368 25.1325 7.45207C24.9448 8.36515 24.5584 9.25089 23.9734 10.1057C23.3866 10.9622 22.6484 11.6584 21.759 12.1979C22.5318 12.6189 23.0949 13.111 23.4467 13.6741C23.7984 14.2373 23.9734 14.9171 23.9734 15.7135C23.9734 16.2293 23.9023 16.8034 23.762 17.4358C23.4339 18.9831 22.7724 20.3354 21.7754 21.4964C20.7785 22.6555 19.5848 23.5467 18.1906 24.1682C16.7963 24.7897 15.3256 25.0995 13.7782 25.0995H0L2.60438 12.7975C3.16389 10.1549 4.64742 7.79835 6.78888 6.15261H4.01136L5.20147 0.52832ZM12.4788 19.4752C13.3226 19.4752 13.9605 19.3112 14.3942 18.9831C14.828 18.6551 15.1269 18.1284 15.2909 17.4012C15.3383 17.2372 15.362 17.0039 15.362 16.6977C15.362 16.2293 15.2034 15.8776 14.8882 15.6425C14.571 15.4092 14.0626 15.2907 13.3591 15.2907H10.1605L9.28209 19.4734H12.4806L12.4788 19.4752ZM14.0607 9.84321C14.7861 9.84321 15.3492 9.69741 15.7484 9.40398C16.1457 9.11056 16.4154 8.62577 16.5576 7.94597C16.605 7.6653 16.6287 7.47758 16.6287 7.38281C16.6287 6.96181 16.4829 6.65016 16.1894 6.4515C15.896 6.25285 15.4458 6.15261 14.8353 6.15261H12.0942L11.3215 9.84321H14.0626H14.0607Z" fill="#06E113"/><path d="M64.8529 7.52315H58.5615L60.0378 0.52832H80.953L79.4767 7.52315H73.1854L69.4602 25.0977H61.1295L63.455 14.1261C64.0181 11.4689 65.5436 9.11238 67.7379 7.51039L64.8547 7.52315H64.8529Z" fill="white"/><path d="M29.6779 0.52832H47.8867L46.4104 7.52315H36.5324L36.0749 9.66825H43.0698L41.7339 15.9596H34.739L32.8053 25.0995H24.4746L29.6779 0.52832Z" fill="white"/><path d="M49.6419 0.52832H57.9726L52.7712 25.0995H44.4404L49.6419 0.52832Z" fill="white"/><path d="M77.7272 20.8806L81.2429 18.2434C81.899 17.7276 82.9177 16.9895 84.301 16.0291C86.3404 14.6002 87.8331 13.4575 88.7826 12.6027C89.7321 11.748 90.288 10.9224 90.452 10.1241C90.4994 9.89081 90.5231 9.71402 90.5231 9.59738C90.5231 8.44919 89.5973 7.8751 87.7456 7.8751C86.6667 7.8751 85.4893 8.09745 84.2136 8.54214C82.936 8.98684 81.7586 9.57369 80.6815 10.2991L82.3692 2.42577C83.6103 1.67672 85.0574 1.0844 86.7104 0.650639C88.3634 0.21688 90.0329 0 91.7187 0C94.2502 0 96.2057 0.568626 97.589 1.70405C98.9705 2.84131 99.663 4.32301 99.663 6.151C99.663 6.59569 99.6047 7.11147 99.4881 7.69832C99.0434 9.71402 98.3162 11.4017 97.3083 12.7595C96.3005 14.1191 94.8352 15.5133 92.9143 16.9421L90.4192 18.8047H97.8004L96.4645 25.0961H76.8506L77.729 20.8788L77.7272 20.8806Z" fill="#06E113"/><path d="M109.997 20.5997H99.1709L100.19 15.7135L114.846 0.52832H122.579L119.661 14.3066H123L121.664 20.5979H118.326L117.376 25.0977H109.045L109.995 20.5979L109.997 20.5997ZM112.725 14.4378L113.722 9.62086L109.113 14.4378H112.725Z" fill="#06E113"/></symbol></svg>
 <main id="land">
 <svg class="logo" role="img" aria-label="BFit24" viewBox="0 0 123 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.20147 0.52832H18.4184C20.527 0.52832 22.1964 1.01493 23.4266 1.98633C24.6568 2.95956 25.2729 4.28818 25.2729 5.97583C25.2729 6.4916 25.2255 6.98368 25.1325 7.45207C24.9448 8.36515 24.5584 9.25089 23.9734 10.1057C23.3866 10.9622 22.6484 11.6584 21.759 12.1979C22.5318 12.6189 23.0949 13.111 23.4467 13.6741C23.7984 14.2373 23.9734 14.9171 23.9734 15.7135C23.9734 16.2293 23.9023 16.8034 23.762 17.4358C23.4339 18.9831 22.7724 20.3354 21.7754 21.4964C20.7785 22.6555 19.5848 23.5467 18.1906 24.1682C16.7963 24.7897 15.3256 25.0995 13.7782 25.0995H0L2.60438 12.7975C3.16389 10.1549 4.64742 7.79835 6.78888 6.15261H4.01136L5.20147 0.52832ZM12.4788 19.4752C13.3226 19.4752 13.9605 19.3112 14.3942 18.9831C14.828 18.6551 15.1269 18.1284 15.2909 17.4012C15.3383 17.2372 15.362 17.0039 15.362 16.6977C15.362 16.2293 15.2034 15.8776 14.8882 15.6425C14.571 15.4092 14.0626 15.2907 13.3591 15.2907H10.1605L9.28209 19.4734H12.4806L12.4788 19.4752ZM14.0607 9.84321C14.7861 9.84321 15.3492 9.69741 15.7484 9.40398C16.1457 9.11056 16.4154 8.62577 16.5576 7.94597C16.605 7.6653 16.6287 7.47758 16.6287 7.38281C16.6287 6.96181 16.4829 6.65016 16.1894 6.4515C15.896 6.25285 15.4458 6.15261 14.8353 6.15261H12.0942L11.3215 9.84321H14.0626H14.0607Z" fill="#06E113"/>
@@ -490,11 +517,14 @@ var EX=[
 ["Kiefer & Stirn","Löse deinen Kiefer und glätte deine Stirn.","head",10],
 ["Arme lockern","Schüttle Arme und Hände locker aus.","arms",10],
 ["Weiter","Spüre dich kurz. Du bist bereit für den nächsten Moment.","all",10]]},
-{c:6,n:"Zahlenjagd",game:"num",d:"Tippe die Zahlen der Reihe nach an. Trainiert Fokus und Blick. Dauer ca. 1 Minute.",i:"Alle Zahlen liegen durcheinander auf dem Spielfeld. Tippe sie so schnell du kannst der Reihe nach an, von 1 bis zur letzten Zahl. Halte den Blick locker auf der Mitte und finde die nächste Zahl, ohne zu hetzen. Such dir einen Schwierigkeitsgrad aus. Deine Bestzeit wird auf diesem Gerät gespeichert."},
-{c:6,n:"Bananen-Memory",game:"mem",d:"Finde alle Paare mit möglichst wenigen Zügen. Trainiert Merkfähigkeit. Dauer ca. 1 Minute.",i:"Decke zwei Karten auf und finde alle Paare. Merk dir, wo welches Symbol liegt, und versuch es mit möglichst wenigen Zügen zu schaffen. Atme dabei ruhig. Such dir einen Schwierigkeitsgrad aus. Deinen besten Wert speichert die App auf diesem Gerät."},
+{c:6,n:"Zahlenjagd",game:"num",d:"Tippe die Zahlen der Reihe nach an. Trainiert Fokus und Blick. Dauer ca. 1 Minute.",i:"Alle Zahlen liegen durcheinander auf dem Spielfeld. Tippe sie so schnell du kannst der Reihe nach an, von 1 bis zur letzten Zahl. Halte den Blick locker auf der Mitte und finde die nächste Zahl, ohne zu hetzen. Such dir einen Schwierigkeitsgrad aus. Deine Zeit kommt in die Bestenliste."},
+{c:6,n:"Bananen-Memory",game:"mem",d:"Finde alle Paare so schnell du kannst. Trainiert Merkfähigkeit. Dauer ca. 1 Minute.",i:"Decke zwei Karten auf und finde alle Paare. Merk dir, wo welches Symbol liegt, und versuch es so schnell und mit so wenigen Zügen wie möglich zu schaffen. Die Zeit läuft mit. Atme dabei ruhig. Such dir einen Schwierigkeitsgrad aus. Deine Zeit kommt in die Bestenliste."},
 {c:6,n:"Atem-Takt",game:"tak",d:"Tippe, wenn der Ring den Kreis trifft. Trainiert Rhythmus und Ruhe. Dauer ca. 1 Minute.",i:"Ein Ring zieht sich langsam zusammen. Tippe genau in dem Moment, in dem er den grünen Kreis trifft. Atme dabei ruhig im Takt des Rings. Pro Runde gibt es bis zu 3 Punkte, insgesamt 8 Runden. Such dir ein Tempo aus."},
 {c:6,n:"Anderes Blatt",game:"find",d:"Finde das Symbol, das nicht passt. Trainiert Aufmerksamkeit. Dauer ca. 1 Minute.",i:"Auf dem Feld liegen lauter gleiche Symbole, nur eins ist anders. Finde es so schnell du kannst. Du spielst sechs Runden, die Zeit läuft die ganze Zeit mit. Lass den Blick weich über das Feld wandern, statt jedes Feld einzeln abzusuchen."},
-{c:6,n:"Reihenfolge",game:"seq",d:"Merk dir die Folge und wiederhole sie. Trainiert das Arbeitsgedächtnis. Dauer ca. 1 Minute.",i:"Der Gorilla zeigt dir eine Folge von Symbolen mit Tönen. Wiederhole sie in derselben Reihenfolge. Mit jeder Runde wird sie um ein Symbol länger. Schaffst du eine Folge von 6, hast du gewonnen. Such dir ein Tempo aus."},
+{c:6,n:"Reihenfolge",game:"seq",d:"Merk dir die Folge und wiederhole sie. Trainiert das Arbeitsgedächtnis. Dauer ca. 1 Minute.",i:"Der Gorilla zeigt dir eine Folge von Symbolen mit Tönen. Wiederhole sie in derselben Reihenfolge. Mit jeder Runde wird sie um ein Symbol länger. Wie lang schaffst du es? Bei einer Folge von 12 hast du gewonnen. Deine beste Länge kommt in die Bestenliste. Such dir ein Tempo aus."},
+{c:6,n:"Bananenjagd",game:"ban",d:"Fang so viele Bananen wie möglich. Trainiert Reaktion und Fokus. Dauer 30 Sekunden.",i:"Bananen tauchen kurz auf dem Feld auf. Tippe sie schnell an, bevor sie verschwinden. Aber Vorsicht: Tippst du auf einen Stein, gibt es Punktabzug. Du spielst 30 Sekunden. Such dir ein Tempo aus. Deine Punkte kommen in die Bestenliste."},
+{c:6,n:"Kopfrechnen",game:"calc",d:"Löse zehn Aufgaben so schnell du kannst. Trainiert Konzentration. Dauer ca. 1 Minute.",i:"Du bekommst zehn Rechenaufgaben und tippst jeweils auf das richtige Ergebnis. Für jeden Fehler gibt es 3 Sekunden Strafzeit. Bleib ruhig und atme dabei gleichmäßig. Deine Zeit kommt in die Bestenliste."},
+{c:6,n:"Farbwörter",game:"col",d:"Tippe auf die Farbe, in der das Wort geschrieben ist. Trainiert Aufmerksamkeit. Dauer ca. 1 Minute.",i:"Auf dem Feld steht ein Farbwort, zum Beispiel ROT, aber in einer anderen Farbe geschrieben. Tippe auf die Farbe, in der das Wort leuchtet, nicht auf das, was dort steht. Für jeden Fehler gibt es 2 Sekunden Strafzeit. Deine Zeit kommt in die Bestenliste."},
 {c:3,n:"Komplett",d:"Wasser, Dehnen, Liegestütze und Tagesziel. Dauer ca. 3 Minuten.",i:"Starte deinen Tag in etwa drei Minuten: ein Glas Wasser trinken, den Körper dehnen, ein paar Liegestütze machen und ein Tagesziel setzen. Such dir einen Platz mit etwas Raum, am besten mit Platz für Liegestütze auf dem Boden. Der Gorilla macht jeden Schritt mit dir.",g:[["🥛 Glas füllen","Fülle ein Glas mit 250 ml Wasser.","",8,"",""],
 ["💧 Trinken","Trinke das Glas in kleinen Schlucken aus. Spüre, wie das Wasser deinen Körper weckt.","belly",20,"","m"],
 ["Durchatmen","Atme einmal tief durch. Dein Körper ist startklar.","all",8,"",""],
@@ -586,7 +616,7 @@ $("du").style.display=EX[ei].g?"none":"flex";$("cust").classList.toggle("hide",!
 var GOALS=[["rel","🧘","Entspannen","Abschalten und runterkommen"],["foc","🎯","Fokus","Klar im Kopf werden"],["slp","🌙","Schlafen","Ruhig in den Abend"],["eng","⚡","Energie","Wach und kraftvoll starten"]],GF="",curTab="home";
 var TAG={"Ruhig":"rel","Box":"foc","4-7-8":"rel slp","Kampfsport":"eng foc","Wechselatmung":"rel foc","Bienenatem":"rel slp","Löwenatem":"eng rel","Eigene Übung":"rel foc","Body-Scan":"rel slp","Muskelentspannung":"rel slp","5-4-3-2-1":"foc rel","Dankbarkeit":"rel","Mini-Pause":"foc rel","Gedankenwolken":"foc rel","Komplett:3":"eng foc","Glas Wasser":"eng","Liegestütze":"eng","Dehnen":"eng rel","Tagesziel":"foc eng","Komplett:4":"slp rel","Barfuß über den Rasen":"rel","Tagesrückblick":"rel slp","Einschlafen":"slp","Mentale Vorbereitung":"foc eng","Visualisierung":"foc","Cool-down":"rel"};
 function tg(e){return e.game?"foc":(TAG[e.n+":"+e.c]||TAG[e.n]||"")}
-var ICO={"Ruhig":"🌊","Box":"🔲","4-7-8":"🌙","Kampfsport":"🥋","Wechselatmung":"☯️","Bienenatem":"🐝","Löwenatem":"🦁","Eigene Übung":"🎚️","Body-Scan":"🧍","Muskelentspannung":"💪","5-4-3-2-1":"👀","Dankbarkeit":"🙏","Mini-Pause":"⏸️","Gedankenwolken":"☁️","Komplett:3":"☀️","Glas Wasser":"💧","Liegestütze":"🏋️","Dehnen":"🤸","Tagesziel":"🎯","Komplett:4":"🌙","Barfuß über den Rasen":"🌱","Tagesrückblick":"📖","Einschlafen":"😴","Mentale Vorbereitung":"🧠","Visualisierung":"✨","Cool-down":"❄️","Zahlenjagd":"🔢","Bananen-Memory":"🍌","Atem-Takt":"⭕","Anderes Blatt":"🍃","Reihenfolge":"🎵"};
+var ICO={"Ruhig":"🌊","Box":"🔲","4-7-8":"🌙","Kampfsport":"🥋","Wechselatmung":"☯️","Bienenatem":"🐝","Löwenatem":"🦁","Eigene Übung":"🎚️","Body-Scan":"🧍","Muskelentspannung":"💪","5-4-3-2-1":"👀","Dankbarkeit":"🙏","Mini-Pause":"⏸️","Gedankenwolken":"☁️","Komplett:3":"☀️","Glas Wasser":"💧","Liegestütze":"🏋️","Dehnen":"🤸","Tagesziel":"🎯","Komplett:4":"🌙","Barfuß über den Rasen":"🌱","Tagesrückblick":"📖","Einschlafen":"😴","Mentale Vorbereitung":"🧠","Visualisierung":"✨","Cool-down":"❄️","Zahlenjagd":"🔢","Bananen-Memory":"🃏","Bananenjagd":"🍌","Kopfrechnen":"➕","Farbwörter":"🎨","Atem-Takt":"⭕","Anderes Blatt":"🍃","Reihenfolge":"🎵"};
 function ic(e){return ICO[e.n+":"+e.c]||ICO[e.n]||CAT[e.c].ic}
 function ttl(e){return e.n==="Komplett"?CAT[e.c].n+" komplett":e.n}
 function sd(e){return e.d.replace(/\s*Dauer[^.]*\./,"").replace(/\s*\d+(,\d+)?\s*(Minuten?|Sekunden?)\.$/,"")}
@@ -606,7 +636,14 @@ function drawLib(){var F=$("gf"),L=$("lib");F.innerHTML="";L.innerHTML="";
 [["","Alle"]].concat(GOALS.map(function(x){return [x[0],x[1]+" "+x[2]]})).forEach(function(x){var b=mk("button","fc",x[1]);b.setAttribute("aria-pressed",GF===x[0]);b.onclick=function(){GF=x[0];drawLib()};F.appendChild(b)});
 CAT.forEach(function(c,ci2){if(ci2===6)return;var ids=[];EX.forEach(function(e,i){if(e.c===ci2&&(!GF||tg(e).indexOf(GF)>=0))ids.push(i)});if(!ids.length)return;
 var h=mk("h2","h2");h.appendChild(document.createTextNode(c.ic+" "+c.n));L.appendChild(h);ids.forEach(function(i){L.appendChild(card(i))})})}
-function drawGames(){var L=$("gm");L.innerHTML="";EX.forEach(function(e,i){if(e.c===6)L.appendChild(card(i))})}
+function drawGames(){var L=$("gm");L.innerHTML="";
+var bn=mk("div","gbanner");bn.innerHTML='<svg viewBox="0 0 123 25.1" aria-label="BFit24"><use href="#lg24"/></svg><span>Spiel mit und werde Nr. 1 in deiner Bestenliste.</span>';L.appendChild(bn);
+EX.forEach(function(e,i){if(e.c===6)L.appendChild(card(i))});
+var h=mk("h2","h2","🏆 Deine Rekorde");L.appendChild(h);var rc=mk("div","rec");
+EX.forEach(function(e){if(e.c!==6||!e.game)return;var g=e.game,row=mk("div"),parts=[];
+GL[g].forEach(function(l,li){var m=gMeta(g,li),L2=RK[m.k]||[],b=L2.length?m.f(L2[0].s):(GB[m.k]?(m.low?fmtT(GB[m.k]):m.f(GB[m.k])):"–");parts.push(l[0]+": "+b)});
+row.appendChild(mk("b","",ic(e)+" "+ttl(e)));row.appendChild(mk("span","",parts.join(" · ")));rc.appendChild(row)});
+L.appendChild(rc)}
 function drawProg(){var s=streak(),k=Math.max(S.best,s),T=$("tl");T.innerHTML="";
 [["🔥",s,"Tage Serie"],["🏆",k,"Beste Serie"],["🍌",S.b,"Bananen gesammelt"],["📅",S.d.length,"Übungstage"]].forEach(function(x){var d=mk("div");d.appendChild(mk("b","",x[0]+" "+x[1]));d.appendChild(mk("small","",x[2]));T.appendChild(d)});
 wxpDraw();var R=$("rwl");R.innerHTML="";var ic=["🟢","⭐","🏅","👑"],ds2=["Ein grünes Stirnband","Ein goldener Stern","Eine Medaille","Eine Krone"];
@@ -713,73 +750,142 @@ for(i=0;i<4;i++){if(CUS[i]>0)s.push([nm[i],CUS[i],tg[i]]);tot+=CUS[i];$("r"+i).v
 if(e)e.s=s;$("vr").textContent="≈ "+(60/tot).toFixed(1).replace(".",",")+" Atemzüge pro Minute"}
 function lockC(b){for(var i=0;i<4;i++)$("r"+i).disabled=b}
 [0,1,2,3].forEach(function(i){$("r"+i).oninput=function(){if(run)return;CUS[i]=+this.value;custApply();try{localStorage.setItem(CK,JSON.stringify(CUS))}catch(e){}}});
-var GK="bfit24-game",GB={},gtm=0,gt=0,GL={num:[["3×3",9],["4×4",16],["5×5",25]],mem:[["Leicht",4],["Mittel",6],["Schwer",8]],tak:[["Langsam",2400],["Mittel",1800],["Schnell",1200]],find:[["Leicht",3],["Mittel",4],["Schwer",5]],seq:[["Langsam",800],["Mittel",600],["Schnell",420]]},GS={num:1,mem:1,tak:1,find:1,seq:1},graf=0;
+var GK="bfit24-game",GB={},gtm=0,gt=0,GL={num:[["3×3",9],["4×4",16],["5×5",25]],mem:[["Leicht",4],["Mittel",6],["Schwer",8]],tak:[["Langsam",2400],["Mittel",1800],["Schnell",1200]],find:[["Leicht",3],["Mittel",4],["Schwer",5]],seq:[["Langsam",800],["Mittel",600],["Schnell",420]],ban:[["Langsam",1100],["Mittel",800],["Schnell",600]],calc:[["Leicht",0],["Mittel",1],["Schwer",2]],col:[["8 Runden",8],["12 Runden",12],["16 Runden",16]]},GS={num:1,mem:1,tak:1,find:1,seq:1,ban:1,calc:1,col:1},graf=0;
 try{GB=JSON.parse(localStorage.getItem(GK))||{}}catch(e){}
 function gsave(){try{localStorage.setItem(GK,JSON.stringify(GB))}catch(e){}}
 function gStop(){clearInterval(gtm);clearTimeout(gt);cancelAnimationFrame(graf);gtm=0;gt=0;graf=0}
 function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
 function fmtT(ms){return (ms/1000).toFixed(1).replace(".",",")+" s"}
 function gWin(){$("phase").textContent="Gut gemacht 🌿";gong();buzz([80,60,80]);celebrate();reward()}
+var RK={},RKEY="bfit24-rank",RN="";
+try{RK=JSON.parse(localStorage.getItem(RKEY))||{};RN=localStorage.getItem("bfit24-name")||""}catch(e){}
+function rkSave(){try{localStorage.setItem(RKEY,JSON.stringify(RK))}catch(e){}}
+function fPts(v){return v+" Pkt."}function fLen(v){return "Länge "+v}
+function gMeta(g,li){if(li===undefined)li=GS[g];var L=GL[g][li],v=L[1];
+return{num:{k:"num"+v,low:1,f:fmtT},mem:{k:"mem"+v,low:1,f:fmtT},find:{k:"find"+v,low:1,f:fmtT},tak:{k:"tak"+v,low:0,f:fPts},seq:{k:"seq"+v,low:0,f:fLen},ban:{k:"ban"+v,low:0,f:fPts},calc:{k:"calc"+li,low:1,f:fmtT},col:{k:"col"+v,low:1,f:fmtT}}[g]}
+function gBest(k){var L=RK[k];return L&&L.length?L[0].s:GB[k]}
+function rkDate(t){var d=new Date(t);return d.getDate()+"."+(d.getMonth()+1)+"."}
+function rkRows(m,ent){var L=RK[m.k]||[],ul=mk("ul","rkl"),md=["🥇","🥈","🥉"];
+if(!L.length){return mk("p","rkx","Noch kein Eintrag. Spiel eine Runde und sei die Nr. 1.")}
+L.forEach(function(x,i){var li=mk("li",x===ent?"me":"");li.appendChild(mk("b","",i<3?md[i]:String(i+1)));li.appendChild(mk("span","",x.n));var em=mk("em","",m.f(x.s));li.appendChild(em);if(x.x){li.appendChild(mk("small","",x.x))}li.appendChild(mk("small","",rkDate(x.d)));ul.appendChild(li)});return ul}
+function gFin(m,sc,x,ok,lbl){var L=RK[m.k]||(RK[m.k]=[]),pos=0,ent=null;
+while(pos<L.length&&!(m.low?sc<L[pos].s:sc>L[pos].s))pos++;
+var tot=L.length;if(pos<10){ent={n:RN||"Gorilla",s:sc,x:x||"",d:Date.now()};L.splice(pos,0,ent);if(L.length>10)L.length=10;rkSave()}
+var box=$("game"),r=mk("div","rkres");
+r.innerHTML='<div class="glogo" style="margin-bottom:6px"><svg viewBox="0 0 123 25.1"><use href="#lg24"/></svg></div>';
+var best=ent&&pos===0&&tot>0;
+r.appendChild(mk("h3","",(lbl||"Ergebnis")+": "+m.f(sc)+(x?" · "+x:"")));
+r.appendChild(mk("p","",ent?(pos===0?"Neue Nr. 1! 🏆":"Platz "+(pos+1)+" in deiner Bestenliste"):"Knapp an der Bestenliste vorbei. Weiter so!"));
+var rows=mk("div");
+if(ent){var nm=mk("div","rknm"),inp=mk("input");inp.maxLength=14;inp.value=RN;inp.placeholder="Dein Name";inp.setAttribute("aria-label","Dein Name");
+var sb=mk("button","chip","Speichern");sb.onclick=function(){var v=(inp.value||"").trim().slice(0,14)||"Gorilla";ent.n=v;RN=v;try{localStorage.setItem("bfit24-name",v)}catch(e){}rkSave();rows.innerHTML="";rows.appendChild(rkRows(m,ent));sb.textContent="Gespeichert ✓"};
+nm.appendChild(inp);nm.appendChild(sb);r.appendChild(nm)}
+rows.appendChild(rkRows(m,ent));r.appendChild(rows);box.appendChild(r);
+var gr=$("grk");if(gr){gr.classList.add("hide")}
+if(ok){gWin()}else{$("phase").textContent="Geschafft 🌿";}
+try{r.scrollIntoView({block:"nearest",behavior:"smooth"})}catch(e){}}
 function gameInit(){var g=EX[ei].game,box=$("game");gStop();box.innerHTML="";
 if(!run)$("phase").textContent="Fokus!";
+var hd=mk("div","glogo");hd.innerHTML='<svg viewBox="0 0 123 25.1" aria-label="BFit24"><use href="#lg24"/></svg><span>Mini-Spiel</span>';box.appendChild(hd);
 var lv=mk("div","row");GL[g].forEach(function(l,i){var b=mk("button","chip",l[0]);b.setAttribute("aria-pressed",i===GS[g]);b.onclick=function(){GS[g]=i;gameInit()};lv.appendChild(b)});box.appendChild(lv);
 var info=mk("div","ginfo");info.id="ginfo";box.appendChild(info);
 var grid=mk("div","ggrid");grid.id="ggrid";box.appendChild(grid);
-var nb=mk("button","chip","Neu starten");nb.onclick=gameInit;box.appendChild(nb);
-if(g==="num")gNum();else if(g==="mem")gMem();else if(g==="tak")gTak();else if(g==="find")gFind();else gSeq()}
-function gNum(){var n=GL.num[GS.num][1],k=Math.round(Math.sqrt(n)),grid=$("ggrid"),nxt=1,best=GB["num"+n],t0=0,a=[],i;
+var bar=mk("div","row"),nb=mk("button","chip","Neu starten");nb.onclick=gameInit;bar.appendChild(nb);
+var m=gMeta(g),rb=mk("button","chip","🏆 Bestenliste");bar.appendChild(rb);box.appendChild(bar);
+var grk=mk("div","rkres hide");grk.id="grk";grk.appendChild(mk("h3","","Bestenliste · "+GL[g][GS[g]][0]));grk.appendChild(rkRows(m));box.appendChild(grk);
+rb.onclick=function(){grk.classList.toggle("hide")};
+if(g==="num")gNum();else if(g==="mem")gMem();else if(g==="tak")gTak();else if(g==="find")gFind();else if(g==="ban")gBan();else if(g==="calc")gCalc();else if(g==="col")gCol();else gSeq()}
+function gNum(){var n=GL.num[GS.num][1],k=Math.round(Math.sqrt(n)),grid=$("ggrid"),nxt=1,m=gMeta("num"),best=gBest(m.k),t0=0,a=[],i;
 grid.style.gridTemplateColumns="repeat("+k+",1fr)";
 for(i=1;i<=n;i++)a.push(i);shuffle(a);
 $("ginfo").textContent="Tippe 1 bis "+n+" der Reihe nach."+(best?" Bestzeit: "+fmtT(best):"");
 a.forEach(function(v){var b=mk("button","gc",String(v));b.onclick=function(){
 if(!t0){t0=performance.now();gtm=setInterval(function(){$("ginfo").textContent="Gesucht: "+nxt+" · "+fmtT(performance.now()-t0)},100)}
 if(v===nxt){b.classList.add("ok");b.disabled=true;nxt++;
-if(nxt>n){clearInterval(gtm);gtm=0;var tm=performance.now()-t0,nw=!best||tm<best;if(nw){GB["num"+n]=tm;gsave()}$("ginfo").textContent="Geschafft in "+fmtT(tm)+(nw?" · Neue Bestzeit! 🏆":"");gWin()}
-else $("ginfo").textContent="Gesucht: "+nxt}
+if(nxt>n){clearInterval(gtm);gtm=0;var tm=performance.now()-t0;$("ginfo").textContent="Geschafft in "+fmtT(tm);gFin(m,Math.round(tm),"",true,"Zeit")}
+else $("ginfo").textContent="Gesucht: "+nxt+" · "+fmtT(performance.now()-t0)}
 else{b.classList.add("bad");setTimeout(function(){b.classList.remove("bad")},300)}};grid.appendChild(b)})}
-function gMem(){var pr=GL.mem[GS.mem][1],sy=["🦍","🍌","🍃","🌸","🌙","💧","🔥","⭐"],cards=[],i,best=GB["mem"+pr],first=null,busy=false,moves=0,found=0,grid=$("ggrid");
+function gMem(){var pr=GL.mem[GS.mem][1],sy=["🦍","🍌","🍃","🌸","🌙","💧","🔥","⭐"],cards=[],i,m=gMeta("mem"),best=gBest(m.k),first=null,busy=false,moves=0,found=0,grid=$("ggrid"),t0=0;
 for(i=0;i<pr;i++){cards.push(sy[i]);cards.push(sy[i])}shuffle(cards);
 grid.style.gridTemplateColumns="repeat(4,1fr)";
-$("ginfo").textContent="Finde alle Paare."+(best?" Bestwert: "+best+" Züge":"");
-cards.forEach(function(s){var b=mk("button","gc","?");b.onclick=function(){
-if(busy||b.disabled||b===first)return;b.textContent=s;b.classList.add("open");
+function back(b){b.innerHTML='<svg class="bk" viewBox="0 0 123 25.1" aria-hidden="true"><use href="#lg24"/></svg>'}
+function tk(){$("ginfo").textContent="Zeit "+fmtT(t0?performance.now()-t0:0)+" · Züge "+moves}
+$("ginfo").textContent="Finde alle Paare."+(best?" Bestzeit: "+fmtT(best):"");
+cards.forEach(function(sv){var b=mk("button","gc");back(b);b.onclick=function(){
+if(busy||b.disabled||b===first)return;
+if(!t0){t0=performance.now();gtm=setInterval(tk,200)}
+b.textContent=sv;b.dataset.s=sv;b.classList.add("open");
 if(!first){first=b;return}
 moves++;var f=first;first=null;
-if(f.textContent===s){f.disabled=true;b.disabled=true;f.classList.add("ok");b.classList.add("ok");found++;$("ginfo").textContent="Züge: "+moves;
-if(found===pr){var nw=!best||moves<best;if(nw){GB["mem"+pr]=moves;gsave()}$("ginfo").textContent="Geschafft in "+moves+" Zügen"+(nw?" · Neuer Bestwert! 🏆":"");gWin()}}
-else{busy=true;$("ginfo").textContent="Züge: "+moves;gt=setTimeout(function(){f.textContent="?";b.textContent="?";f.classList.remove("open");b.classList.remove("open");busy=false},800)}};grid.appendChild(b)})}
-function gTak(){var D=GL.tak[GS.tak][1],grid=$("ggrid"),N=8,r=0,sc=0,t0=0,ph=0,best=GB["tak"+D],ring,btn;
+if(f.dataset.s===sv){f.disabled=true;b.disabled=true;f.classList.add("ok");b.classList.add("ok");found++;tk();
+if(found===pr){clearInterval(gtm);gtm=0;var tm=Math.round(performance.now()-t0);$("ginfo").textContent="Geschafft in "+fmtT(tm)+" mit "+moves+" Zügen";gFin(m,tm,moves+" Züge",true,"Zeit")}}
+else{busy=true;tk();gt=setTimeout(function(){back(f);back(b);f.classList.remove("open");b.classList.remove("open");busy=false},800)}};grid.appendChild(b)})}
+function gTak(){var D=GL.tak[GS.tak][1],grid=$("ggrid"),N=8,r=0,sc=0,t0=0,ph=0,m=gMeta("tak"),best=gBest(m.k),ring,btn;
 grid.style.gridTemplateColumns="1fr";
-grid.innerHTML='<svg viewBox="0 0 200 200" style="width:100%;max-width:240px;margin:0 auto;display:block"><circle cx="100" cy="100" r="40" fill="rgba(6,225,19,.18)" stroke="#06E113" stroke-width="3"/><circle id="gro" cx="100" cy="100" r="95" fill="none" stroke="#ffffff" stroke-width="4"/></svg><button class="chip" id="gtb" style="display:block;margin:10px auto 0;min-width:140px">Tippen</button>';
+grid.innerHTML='<svg viewBox="0 0 200 200" style="width:100%;max-width:240px;margin:0 auto;display:block"><circle cx="100" cy="100" r="40" fill="rgba(6,225,19,.18)" stroke="#06E113" stroke-width="3"/><svg x="73" y="91" width="54" height="12" viewBox="0 0 123 25.1"><use href="#lg24"/></svg><circle id="gro" cx="100" cy="100" r="95" fill="none" stroke="#ffffff" stroke-width="4"/></svg><button class="chip" id="gtb" style="display:block;margin:10px auto 0;min-width:140px">Tippen</button>';
 ring=$("gro");btn=$("gtb");
 function info(t){$("ginfo").textContent=t||("Runde "+r+" von "+N+" · "+sc+" Punkte"+(best?" · Bestwert "+best:""))}
 function draw(now){if(ph===1){ring.setAttribute("r",Math.max(25,95-55*(now-t0)/D))}if(ph>=0)graf=requestAnimationFrame(draw)}
 function next(){r++;if(r>N){fin();return}ring.setAttribute("stroke","#ffffff");t0=performance.now();ph=1;info();gt=setTimeout(miss,D*1.35)}
-function fin(){ph=-1;var nw=!best||sc>best;if(nw){GB["tak"+D]=sc;gsave()}info("Geschafft: "+sc+" von "+(N*3)+" Punkten"+(nw?" · Neuer Bestwert! 🏆":""));gWin()}
+function fin(){ph=-1;info("Geschafft: "+sc+" von "+(N*3)+" Punkten");gFin(m,sc,"von "+(N*3),true,"Punkte")}
 function miss(){if(ph!==1)return;ph=0;ring.setAttribute("stroke","#ff5c5c");info("Verpasst · "+sc+" Punkte");gt=setTimeout(next,700)}
 btn.onclick=function(){if(ph!==1)return;ph=0;clearTimeout(gt);var dev=Math.abs(performance.now()-(t0+D)),pts=dev<150?3:dev<350?2:dev<700?1:0;sc+=pts;
 ring.setAttribute("stroke",pts>=2?"#06E113":pts===1?"#ffd54a":"#ff5c5c");if(pts===3)tone(523,.4,.1);
 info((pts===3?"Perfekt! +3":pts===2?"Gut! +2":pts===1?"Fast! +1":"Daneben")+" · "+sc+" Punkte");gt=setTimeout(next,700)};
 info("Tippe, wenn der Ring den Kreis trifft.");gt=setTimeout(next,900);graf=requestAnimationFrame(draw)}
-function gFind(){var k=GL.find[GS.find][1],pair=[["🍃","🌸"],["🍃","🌿"],["🌿","☘️"]][GS.find],N=6,r=0,t0=performance.now(),best=GB["find"+k],grid=$("ggrid");
+function gFind(){var k=GL.find[GS.find][1],pair=[["🍃","🌸"],["🍃","🌿"],["🌿","☘️"]][GS.find],N=6,r=0,t0=performance.now(),m=gMeta("find"),best=gBest(m.k),grid=$("ggrid"),ft=setInterval(function(){var q=$("ginfo");if(q&&r<=N)q.textContent="Runde "+Math.min(r,N)+" von "+N+" · "+fmtT(performance.now()-t0)},200);gtm=ft;
 grid.style.gridTemplateColumns="repeat("+k+",1fr)";
 function round(){r++;grid.innerHTML="";var n=k*k,odd=Math.floor(Math.random()*n),i;
-$("ginfo").textContent="Runde "+r+" von "+N+(best?" · Bestzeit "+fmtT(best):"");
+$("ginfo").textContent="Runde "+r+" von "+N+" · "+fmtT(performance.now()-t0)+(best&&r===1?" · Bestzeit "+fmtT(best):"");
 for(i=0;i<n;i++){(function(i){var b=mk("button","gc",i===odd?pair[1]:pair[0]);b.style.fontSize=k>4?"1.1rem":"1.5rem";
 b.onclick=function(){if(i===odd){if(r>=N)fin();else round()}else{b.classList.add("bad");setTimeout(function(){b.classList.remove("bad")},300)}};grid.appendChild(b)})(i)}}
-function fin(){var tm=performance.now()-t0,nw=!best||tm<best;if(nw){GB["find"+k]=tm;gsave()}grid.innerHTML="";$("ginfo").textContent="Geschafft in "+fmtT(tm)+(nw?" · Neue Bestzeit! 🏆":"");gWin()}
+function fin(){clearInterval(gtm);gtm=0;var tm=Math.round(performance.now()-t0);grid.innerHTML="";$("ginfo").textContent="Geschafft in "+fmtT(tm);gFin(m,tm,"",true,"Zeit")}
 round()}
-function gSeq(){var ms=GL.seq[GS.seq][1],sy=["🦍","🍌","🌙","🔥"],fq=[262,330,392,523],seq=[],pads=[],pos=0,input=false,best=GB["seq"+ms]||0,grid=$("ggrid"),WIN=6;
+function gSeq(){var ms=GL.seq[GS.seq][1],sy=["🦍","🍌","🌙","🔥"],fq=[262,330,392,523],seq=[],pads=[],pos=0,input=false,m=gMeta("seq"),best=gBest(m.k)||0,grid=$("ggrid"),WIN=12;
 grid.style.gridTemplateColumns="repeat(2,1fr)";grid.style.maxWidth="280px";grid.style.margin="0 auto 12px";
 function flash(b,c,d){b.classList.add(c);setTimeout(function(){b.classList.remove(c)},d)}
 function info(t){$("ginfo").textContent=t}
-function next(){seq.push(Math.floor(Math.random()*4));pos=0;input=false;info("Länge "+seq.length+" von "+WIN+" · Schau zu"+(best?" · Bestwert "+best:""));gt=setTimeout(function(){play(0)},500)}
-function play(i){if(i>=seq.length){input=true;info("Länge "+seq.length+" von "+WIN+" · Du bist dran");return}
+function next(){seq.push(Math.floor(Math.random()*4));pos=0;input=false;info("Länge "+seq.length+" · Schau zu"+(best?" · Bestwert "+best:""));gt=setTimeout(function(){play(0)},500)}
+function play(i){if(i>=seq.length){input=true;info("Länge "+seq.length+" · Du bist dran");return}
 var b=pads[seq[i]];flash(b,"ok",ms*.65);tone(fq[seq[i]],ms/1000*.7,.1);gt=setTimeout(function(){play(i+1)},ms)}
 sy.forEach(function(s,idx){var b=mk("button","gc",s);b.style.fontSize="2.2rem";b.onclick=function(){if(!input)return;flash(b,"open",200);tone(fq[idx],.25,.1);
-if(idx===seq[pos]){pos++;if(pos===seq.length){input=false;if(seq.length>=WIN){if(WIN>best){GB["seq"+ms]=WIN;gsave()}info("Geschafft! Folge von "+WIN+" gemerkt 🏆");gWin()}else{info("Richtig!");gt=setTimeout(next,700)}}}
-else{input=false;flash(b,"bad",500);var got=seq.length-1;if(got>best){GB["seq"+ms]=got;gsave()}info(got>0?"Daneben. Du hast eine Folge von "+got+" geschafft. Tippe auf Neu starten.":"Daneben. Tippe auf Neu starten und versuch es noch einmal.")}};pads.push(b);grid.appendChild(b)});
+if(idx===seq[pos]){pos++;if(pos===seq.length){input=false;if(seq.length>=WIN){info("Geschafft! Folge von "+WIN+" gemerkt 🏆");gFin(m,WIN,"",true,"Folge")}else{info("Richtig!");gt=setTimeout(next,700)}}}
+else{input=false;flash(b,"bad",500);var got=seq.length-1;if(got>0){info("Daneben. Du hast eine Folge von "+got+" geschafft.");gFin(m,got,"",got>=4,"Folge")}else info("Daneben. Tippe auf Neu starten und versuch es noch einmal.")}};pads.push(b);grid.appendChild(b)});
 info("Gleich geht es los …");gt=setTimeout(next,700)}
+function rnd(a,b){return a+Math.floor(Math.random()*(b-a+1))}
+function gBan(){var ms=GL.ban[GS.ban][1],m=gMeta("ban"),best=gBest(m.k),grid=$("ggrid"),cells=[],sc=0,cur=-1,prev=-1,type="",end=false,T=30000,t0=0,started=false,i;
+grid.style.gridTemplateColumns="repeat(4,1fr)";
+function info(){var l=Math.max(0,Math.ceil((T-(performance.now()-t0))/1000));$("ginfo").textContent=started?("Zeit "+l+" s · "+sc+" Punkte"):("Gleich geht es los …"+(best?" Bestwert "+best+" Punkte":""))}
+function hide(){if(cur>=0){cells[cur].textContent="";cells[cur].classList.remove("open");cur=-1}}
+function show(){if(end)return;hide();var c;do{c=rnd(0,11)}while(c===prev);prev=c;cur=c;type=Math.random()<.22?"rock":"ban";cells[c].textContent=type==="ban"?"🍌":"🪨";cells[c].classList.add("open");gt=setTimeout(function(){hide();gt=setTimeout(show,rnd(120,380))},ms)}
+function fin(){end=true;clearInterval(gtm);gtm=0;clearTimeout(gt);hide();cells.forEach(function(c){c.disabled=true});$("ginfo").textContent="Zeit abgelaufen: "+sc+" Punkte";gFin(m,sc,"",true,"Punkte")}
+for(i=0;i<12;i++){(function(i){var b=mk("button","gc");b.style.fontSize="1.7rem";b.onclick=function(){if(end||!started)return;
+if(i===cur){clearTimeout(gt);if(type==="ban"){sc++;b.classList.add("ok");tone(660,.12,.08)}else{sc=Math.max(0,sc-2);b.classList.add("bad");buzz(30)}
+setTimeout(function(){b.classList.remove("ok");b.classList.remove("bad")},220);hide();info();gt=setTimeout(show,rnd(100,260))}else{b.classList.add("bad");setTimeout(function(){b.classList.remove("bad")},200)}};cells.push(b);grid.appendChild(b)})(i)}
+info();gt=setTimeout(function(){started=true;t0=performance.now();gtm=setInterval(function(){if(performance.now()-t0>=T)fin();else info()},200);show()},1000)}
+function gCalc(){var lv=GS.calc,m=gMeta("calc"),best=gBest(m.k),N=10,r=0,err=0,t0=performance.now(),grid=$("ggrid");
+grid.style.gridTemplateColumns="repeat(2,1fr)";
+gtm=setInterval(function(){var q=$("ginfo");if(q&&r<=N)q.textContent="Aufgabe "+Math.min(r,N)+" von "+N+" · "+fmtT(performance.now()-t0)+(err?" · +"+err*3+" s Strafe":"")},200);
+function q(){var a,b,op,res,t=Math.random();
+if(lv===0){a=rnd(2,15);b=rnd(2,15);op=t<.5?"+":"−";if(op==="−"&&b>a){var x=a;a=b;b=x}}
+else if(lv===1){if(t<.35){a=rnd(2,9);b=rnd(2,6);op="×"}else{a=rnd(10,80);b=rnd(5,60);op=t<.7?"+":"−";if(op==="−"&&b>a){var x2=a;a=b;b=x2}}}
+else{if(t<.5){a=rnd(3,12);b=rnd(3,12);op="×"}else{a=rnd(30,200);b=rnd(15,120);op=t<.75?"+":"−";if(op==="−"&&b>a){var x3=a;a=b;b=x3}}}
+res=op==="+"?a+b:op==="−"?a-b:a*b;return{t:a+" "+op+" "+b,r:res}}
+function round(){r++;grid.innerHTML="";var Q=q(),opts=[Q.r],g=mk("div","gq",Q.t+" = ?");g.appendChild(mk("small","","Aufgabe "+r+" von "+N));grid.appendChild(g);
+while(opts.length<4){var d=Q.r+(Math.random()<.5?-1:1)*rnd(1,Math.max(3,Math.round(Q.r*.2)||3));if(d>=0&&opts.indexOf(d)<0)opts.push(d)}
+shuffle(opts);opts.forEach(function(o){var b=mk("button","gc gb",String(o));b.onclick=function(){if(o===Q.r){b.classList.add("ok")}else{err++;b.classList.add("bad");buzz(30)}
+grid.querySelectorAll("button").forEach(function(x){x.disabled=true});
+gt=setTimeout(function(){if(r>=N)fin();else round()},o===Q.r?160:420)};grid.appendChild(b)})}
+function fin(){clearInterval(gtm);gtm=0;var tm=Math.round(performance.now()-t0)+err*3000;grid.innerHTML="";$("ginfo").textContent="Geschafft in "+fmtT(tm)+(err?" (inkl. "+err*3+" s Strafe)":"");gFin(m,tm,err?err+" Fehler":"fehlerfrei",true,"Zeit")}
+$("ginfo").textContent="Aufgabe 1 von "+N+(best?" · Bestzeit "+fmtT(best):"");round()}
+function gCol(){var N=GL.col[GS.col][1],m=gMeta("col"),best=gBest(m.k),r=0,err=0,t0=performance.now(),grid=$("ggrid"),C=[["ROT","#ff5252"],["GRÜN","#06E113"],["BLAU","#4da6ff"],["GELB","#ffd54a"]];
+grid.style.gridTemplateColumns="repeat(2,1fr)";
+gtm=setInterval(function(){var q=$("ginfo");if(q&&r<=N)q.textContent="Runde "+Math.min(r,N)+" von "+N+" · "+fmtT(performance.now()-t0)+(err?" · +"+err*2+" s Strafe":"")},200);
+function round(){r++;grid.innerHTML="";var w=rnd(0,3),ink=Math.random()<.85?(w+rnd(1,3))%4:w,g=mk("div","gq",C[w][0]);g.style.color=C[ink][1];g.style.fontSize="2.6rem";g.style.letterSpacing=".04em";g.appendChild(mk("small","","Tippe auf die Farbe des Wortes"));g.lastChild.style.color="var(--mute)";g.lastChild.style.fontSize=".8rem";grid.appendChild(g);
+shuffle(C.map(function(c,i){return i})).forEach(function(i){var b=mk("button","gc gb",C[i][0]);b.onclick=function(){if(i===ink){b.classList.add("ok")}else{err++;b.classList.add("bad");buzz(30)}
+grid.querySelectorAll("button").forEach(function(x){x.disabled=true});gt=setTimeout(function(){if(r>=N)fin();else round()},i===ink?150:400)};grid.appendChild(b)})}
+function fin(){clearInterval(gtm);gtm=0;var tm=Math.round(performance.now()-t0)+err*2000;grid.innerHTML="";$("ginfo").textContent="Geschafft in "+fmtT(tm)+(err?" (inkl. "+err*2+" s Strafe)":"");gFin(m,tm,err?err+" Fehler":"fehlerfrei",true,"Zeit")}
+$("ginfo").textContent="Runde 1 von "+N+(best?" · Bestzeit "+fmtT(best):"");round()}
 function celebrate(){
 var t0c=performance.now();CELT=t0c+2600;confetti();
 function f(now){var t=(now-t0c)/1000;TW=(t>.7&&t<1.7)?1:0;W+=(TW-W)*.25;face();if(t<2.5)celRaf=requestAnimationFrame(f);else{W=0;face()}}
