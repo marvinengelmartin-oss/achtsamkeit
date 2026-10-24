@@ -256,6 +256,17 @@ body.lock{overflow:hidden}
 .rec b{display:block;font-size:.95rem}.rec span{color:var(--mute);font-weight:600}
 .gbanner{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#0c1a0e,#101612);border:1px solid #1e3a22;border-radius:18px;padding:14px 16px;margin:0 0 14px}
 .gbanner svg{width:110px;height:23px;flex:none}.gbanner span{color:var(--mute);font-weight:700;font-size:.82rem;line-height:1.3}
+.mood h3{margin:0 0 10px;font-size:1.05rem}
+.mrow{display:flex;gap:8px;justify-content:space-between}
+.mrow button{flex:1;min-width:0;background:var(--bg);border:2px solid var(--line);border-radius:14px;font-size:1.7rem;padding:8px 0 4px;cursor:pointer;color:var(--ink);font:inherit;line-height:1.1}
+.mrow button small{display:block;font-size:.62rem;color:var(--mute);font-weight:700;margin-top:2px}
+.mrow button[aria-pressed=true]{border-color:#06E113;background:rgba(6,225,19,.14)}
+.mrow button span{font-size:1.7rem;display:block}
+.mtip{margin:12px 0 0;color:var(--mute);font-weight:600;font-size:.9rem}
+.mtip button{display:block;margin-top:10px;background:#06E113;color:#000;border:0;border-radius:999px;padding:11px 18px;font:inherit;font-weight:900;cursor:pointer}
+.mwk{display:flex;justify-content:space-between;gap:4px;margin:4px 0 10px}
+.mwk div{flex:1;text-align:center;font-size:1.4rem}.mwk small{display:block;font-size:.65rem;color:var(--mute);font-weight:800}
+.mwk .none{opacity:.25}
 </style>
 </head>
 <body>
@@ -313,6 +324,7 @@ body.lock{overflow:hidden}
 <div class="week" id="wk"></div>
 <p class="goal" id="stG"></p><div class="bar sm"><i id="stP"></i></div>
 </div>
+<div class="card mood" id="mood"></div>
 <div id="hero"></div>
 <h2 class="h2">Kurz <span>&amp; gut</span></h2>
 <div class="hs" id="quick"></div>
@@ -337,6 +349,8 @@ body.lock{overflow:hidden}
 <h1 class="hi">Dein <span>Fortschritt</span></h1>
 <p class="sub2">Bleib dran: Schon wenige Minuten am Tag machen einen Unterschied.</p>
 <div class="tl" id="tl"></div>
+<h2 class="h2">Deine <span>Stimmung</span></h2>
+<div class="card" id="moodp"></div>
 <h2 class="h2">Belohnungen für <span>deinen Gorilla</span></h2>
 <div id="rwl"></div>
 <h2 class="h2">Wetter für <span>den Gorilla</span></h2>
@@ -480,7 +494,7 @@ var EX=[
 {c:0,n:"Bienenatem",nose:1,d:"Beim Ausatmen summen. Wirkt sehr entspannend.",i:"Setz dich aufrecht hin und schließe den Mund. Atme vier Sekunden durch die Nase ein und summe beim langen Ausatmen leise wie eine Biene. Spüre das Kribbeln im Gesicht und im Kopf. Wenn du magst, legst du die Zeigefinger leicht auf die Ohren. Bei Schwindel oder Ohrenschmerzen hör auf.",s:[["Einatmen",4,1],["Summen 🎵",8,0]]},
 {c:0,n:"Löwenatem",nose:1,lion:1,d:"Mund weit auf, Zunge raus. Löst Spannung im Gesicht.",i:"Atme drei Sekunden ruhig durch die Nase ein. Dann reißt du den Mund weit auf, streckst die Zunge heraus und atmest mit einem lauten Hauch aus, wie ein Löwe. Das lockert Kiefer und Gesicht und macht Spaß. Wiederhole das fünf bis zehn Mal. Bei Schwindel hör auf und atme normal weiter.",s:[["Einatmen",3,1],["Löwe! 🦁",3,0]]},
 {c:0,n:"Eigene Übung",custom:1,d:"Stell deinen Atemrhythmus selbst ein.",i:"Stell mit den Reglern ein, wie lange du einatmest, ausatmest und die Luft anhältst. Fang mit ruhigen Werten an, zum Beispiel 4 Sekunden ein und 6 Sekunden aus. Wenn dir schwindelig wird, hör auf und atme normal weiter.",s:[["Einatmen",4,1],["Ausatmen",6,0]]},
-{c:1,n:"Body-Scan",d:"Körper Stück für Stück wahrnehmen und entspannen. Dauer ca. 1,5 Minuten.",i:"Setz oder leg dich an einen ruhigen Ort, an dem du die nächsten Minuten ungestört bist. Schließe die Augen, wenn du magst. Der Gorilla führt deine Aufmerksamkeit Schritt für Schritt von den Füßen bis zum Kopf. Der leuchtende Körperteil zeigt, wo du gerade hinspüren sollst.",g:[["Ankommen","Setz oder leg dich bequem hin. Schließe die Augen, wenn du magst.","",8],
+{c:1,n:"Body-Scan",d:"Körper Stück für Stück wahrnehmen und entspannen. Dauer ca. 1,5 Minuten.",i:"Setz oder leg dich an einen ruhigen Ort, an dem du die nächsten Minuten ungestört bist. Schließe die Augen, wenn du magst. Der Gorilla führt deine Aufmerksamkeit Schritt für Schritt von den Füßen bis zum Kopf. Der Gorilla zeigt dir, wo du gerade hinspüren sollst.",g:[["Ankommen","Setz oder leg dich bequem hin. Schließe die Augen, wenn du magst.","",8],
 ["Füße","Spüre deine Füße. Lass sie schwer und warm werden.","feet",12],
 ["Beine & Becken","Spüre deine Beine und dein Becken. Lass die Spannung los.","hips",12],
 ["Bauch","Spüre deinen Bauch. Er hebt und senkt sich mit dem Atem.","belly",12],
@@ -488,6 +502,10 @@ var EX=[
 ["Arme & Hände","Spüre deine Arme und Hände. Lass sie ganz locker werden.","arms",12],
 ["Gesicht & Kopf","Entspanne Kiefer, Augen und Stirn.","head",12],
 ["Ganzer Körper","Spüre deinen ganzen Körper. Atme ruhig weiter.","all",12]]},
+{c:1,n:"Nacken lösen",d:"Nacken und Schultern sanft lockern. Dauer ca. 1,5 Minuten.",i:"Perfekt nach langem Sitzen am Handy oder Bildschirm. Du lockerst Nacken und Schultern mit langsamen, sanften Bewegungen. Bewege dich nur so weit, dass es angenehm bleibt. Wenn es zieht oder schmerzt, geh ein Stück zurück. Atme dabei ruhig weiter.",g:[["Aufrichten","Setz oder stell dich aufrecht hin. Lass die Schultern locker hängen.","head",6],["Kinn zur Brust","Senke das Kinn langsam zur Brust und spüre die Dehnung im Nacken.","head",12],["Ohr zur linken Schulter","Neige den Kopf sanft zur linken Seite. Die rechte Schulter bleibt unten.","head",12],["Ohr zur rechten Schulter","Neige den Kopf jetzt sanft zur rechten Seite.","head",12],["Kopf drehen","Dreh den Kopf langsam nach links und nach rechts, wie ein ruhiges Nein.","head",14],["Schultern kreisen","Kreise beide Schultern langsam nach hinten. Mach die Kreise groß und weich.","chest",16],["Schultern hochziehen","Zieh die Schultern zu den Ohren, halte kurz und lass sie mit dem Ausatmen fallen.","chest",12],["Nachspüren","Atme ruhig und spür nach, wie sich dein Nacken jetzt anfühlt.","",8]]},
+{c:1,n:"Rücken mobilisieren",d:"Wirbelsäule bewegen und den Rücken lösen. Dauer ca. 2 Minuten.",i:"Du bewegst deine Wirbelsäule in alle Richtungen, vom Strecken über Drehen bis zum Vorbeugen. So lockerst du den Rücken und wirst beweglicher. Such dir etwas Platz und steh hüftbreit. Beweg dich langsam und mit dem Atem. Bei Rückenschmerzen oder Beschwerden frag vorher deinen Arzt.",g:[["Aufrichten","Stell dich hüftbreit hin. Die Knie sind leicht gebeugt, der Rücken ist lang.","",6],["Arme strecken","Streck die Arme über den Kopf und wachse nach oben. Atme dabei tief ein und aus.","",14],["Seitneigen","Neige den Oberkörper langsam zur einen und dann zur anderen Seite.","",16],["Oberkörper drehen","Dreh den Oberkörper locker nach links und rechts. Die Arme schwingen mit.","",16],["Katze und Kuh","Leg die Hände auf die Oberschenkel. Mach den Rücken rund und dann wieder lang.","",18],["Vorbeugen","Beug dich langsam nach vorn und lass Kopf und Arme locker hängen.","",12],["Aufrollen","Roll dich Wirbel für Wirbel wieder auf. Der Kopf kommt zuletzt.","",10],["Tief ausatmen","Atme tief ein und lang durch den Mund aus. Spüre deinen Rücken.","belly",10]]},
+{c:1,n:"Hüfte & Beine öffnen",d:"Hüfte und Beine lockern und aktivieren. Dauer ca. 2 Minuten.",i:"Du machst deine Hüfte beweglich und weckst die Beine auf, ideal vor dem Training oder nach langem Sitzen. Such dir einen Platz mit etwas Raum und einen festen Stand. Bewege dich kontrolliert und nur im schmerzfreien Bereich.",g:[["Aufrichten","Stell dich hüftbreit hin und spür den festen Boden unter den Füßen.","",6],["Hüftkreisen","Stütz die Hände in die Hüften und kreise das Becken in großen, weichen Kreisen.","hips",20],["Ausfallschritt","Geh abwechselnd locker in einen kleinen Ausfallschritt und spüre die Dehnung vorn in der Hüfte.","hips",20],["Knie heben","Heb abwechselnd die Knie, als würdest du auf der Stelle marschieren.","feet",16],["Wadenheben","Roll langsam auf die Zehenspitzen und wieder runter.","feet",14],["Beine ausschütteln","Schüttle die Beine und Arme locker aus. Lass alles Schwere abfallen.","feet",10],["Tief ausatmen","Atme tief ein und lang durch den Mund aus. Spüre die Beine.","belly",8]]},
+{c:1,n:"Schreibtisch-Reset",d:"Kurze Bewegungspause für zwischendurch. Dauer ca. 1,5 Minuten.",i:"Für zwischendurch im Büro oder Home-Office. Du streckst dich, lockerst Schultern, Nacken und Handgelenke und gönnst deinen Augen eine kurze Pause. Du kannst alles im Stehen oder aufrecht im Sitzen machen.",g:[["Aufrichten","Setz oder stell dich aufrecht hin und lass die Schultern sinken.","",5],["Arme strecken","Streck die Arme über den Kopf und mach dich lang. Atme tief durch.","",12],["Schultern kreisen","Kreise die Schultern langsam nach hinten.","chest",12],["Ohr zur linken Schulter","Neige den Kopf sanft nach links.","head",9],["Ohr zur rechten Schulter","Neige den Kopf sanft nach rechts.","head",9],["Handgelenke kreisen","Kreise beide Handgelenke, erst in die eine, dann in die andere Richtung.","arms",14],["Augen entspannen","Schließe die Augen und schau weit weg von Bildschirm und Handy. Lass die Augen weich werden.","head",14,"","c"],["Tief ausatmen","Atme tief ein und lang durch den Mund aus. Du bist wieder bereit.","belly",8]]},
 {c:1,n:"Muskelentspannung",d:"Muskeln kurz anspannen und loslassen. Dauer ca. 1,5 Minuten.",i:"Setz oder leg dich an einen ruhigen Ort. Du spannst nacheinander einzelne Muskelgruppen für wenige Sekunden an und lässt dann bewusst los. Wenn der Gorilla die Muskeln anspannt und leicht zittert, spannst du an. Wenn er wieder weich wird, lässt du los. Spanne nur so stark an, dass es nicht schmerzt.",g:[["Ankommen","Setz oder leg dich bequem hin. Gleich spannst du nacheinander Muskeln an und lässt wieder los.","",6],
 ["Anspannen","Balle beide Fäuste fest und spanne die Arme an.","arms",5,"t"],
 ["Loslassen","Lass los. Spüre, wie Arme und Hände schwer werden.","arms",8],
@@ -614,9 +632,9 @@ function refresh(){
 chips("du",DU.map(function(m){return m+" Min"}),di,function(i){di=i;refresh()});
 $("du").style.display=EX[ei].g?"none":"flex";$("cust").classList.toggle("hide",!EX[ei].custom);var gm=!!EX[ei].game;document.querySelector(".ctl").style.display=gm?"none":"";$("game").classList.toggle("hide",!gm);if(!gm){gStop();if(!run)$("phase").textContent="Bereit?"}if(gm)gameInit();idle()}
 var GOALS=[["rel","🧘","Entspannen","Abschalten und runterkommen"],["foc","🎯","Fokus","Klar im Kopf werden"],["slp","🌙","Schlafen","Ruhig in den Abend"],["eng","⚡","Energie","Wach und kraftvoll starten"]],GF="",curTab="home";
-var TAG={"Ruhig":"rel","Box":"foc","4-7-8":"rel slp","Kampfsport":"eng foc","Wechselatmung":"rel foc","Bienenatem":"rel slp","Löwenatem":"eng rel","Eigene Übung":"rel foc","Body-Scan":"rel slp","Muskelentspannung":"rel slp","5-4-3-2-1":"foc rel","Dankbarkeit":"rel","Mini-Pause":"foc rel","Gedankenwolken":"foc rel","Komplett:3":"eng foc","Glas Wasser":"eng","Liegestütze":"eng","Dehnen":"eng rel","Tagesziel":"foc eng","Komplett:4":"slp rel","Barfuß über den Rasen":"rel","Tagesrückblick":"rel slp","Einschlafen":"slp","Mentale Vorbereitung":"foc eng","Visualisierung":"foc","Cool-down":"rel"};
+var TAG={"Ruhig":"rel","Box":"foc","4-7-8":"rel slp","Kampfsport":"eng foc","Wechselatmung":"rel foc","Bienenatem":"rel slp","Löwenatem":"eng rel","Eigene Übung":"rel foc","Body-Scan":"rel slp","Muskelentspannung":"rel slp","5-4-3-2-1":"foc rel","Dankbarkeit":"rel","Mini-Pause":"foc rel","Gedankenwolken":"foc rel","Komplett:3":"eng foc","Glas Wasser":"eng","Liegestütze":"eng","Dehnen":"eng rel","Tagesziel":"foc eng","Komplett:4":"slp rel","Barfuß über den Rasen":"rel","Tagesrückblick":"rel slp","Einschlafen":"slp","Mentale Vorbereitung":"foc eng","Visualisierung":"foc","Cool-down":"rel","Nacken lösen":"rel foc","Rücken mobilisieren":"eng rel","Hüfte & Beine öffnen":"eng","Schreibtisch-Reset":"foc eng"};
 function tg(e){return e.game?"foc":(TAG[e.n+":"+e.c]||TAG[e.n]||"")}
-var ICO={"Ruhig":"🌊","Box":"🔲","4-7-8":"🌙","Kampfsport":"🥋","Wechselatmung":"☯️","Bienenatem":"🐝","Löwenatem":"🦁","Eigene Übung":"🎚️","Body-Scan":"🧍","Muskelentspannung":"💪","5-4-3-2-1":"👀","Dankbarkeit":"🙏","Mini-Pause":"⏸️","Gedankenwolken":"☁️","Komplett:3":"☀️","Glas Wasser":"💧","Liegestütze":"🏋️","Dehnen":"🤸","Tagesziel":"🎯","Komplett:4":"🌙","Barfuß über den Rasen":"🌱","Tagesrückblick":"📖","Einschlafen":"😴","Mentale Vorbereitung":"🧠","Visualisierung":"✨","Cool-down":"❄️","Zahlenjagd":"🔢","Bananen-Memory":"🃏","Bananenjagd":"🍌","Kopfrechnen":"➕","Farbwörter":"🎨","Atem-Takt":"⭕","Anderes Blatt":"🍃","Reihenfolge":"🎵"};
+var ICO={"Ruhig":"🌊","Box":"🔲","4-7-8":"🌙","Kampfsport":"🥋","Wechselatmung":"☯️","Bienenatem":"🐝","Löwenatem":"🦁","Eigene Übung":"🎚️","Body-Scan":"🧍","Muskelentspannung":"💪","5-4-3-2-1":"👀","Dankbarkeit":"🙏","Mini-Pause":"⏸️","Gedankenwolken":"☁️","Komplett:3":"☀️","Glas Wasser":"💧","Liegestütze":"🏋️","Dehnen":"🤸","Tagesziel":"🎯","Komplett:4":"🌙","Barfuß über den Rasen":"🌱","Tagesrückblick":"📖","Einschlafen":"😴","Mentale Vorbereitung":"🧠","Visualisierung":"✨","Cool-down":"❄️","Nacken lösen":"🦒","Rücken mobilisieren":"🐈","Hüfte & Beine öffnen":"🦵","Schreibtisch-Reset":"🪑","Zahlenjagd":"🔢","Bananen-Memory":"🃏","Bananenjagd":"🍌","Kopfrechnen":"➕","Farbwörter":"🎨","Atem-Takt":"⭕","Anderes Blatt":"🍃","Reihenfolge":"🎵"};
 function ic(e){return ICO[e.n+":"+e.c]||ICO[e.n]||CAT[e.c].ic}
 function ttl(e){return e.n==="Komplett"?CAT[e.c].n+" komplett":e.n}
 function sd(e){return e.d.replace(/\s*Dauer[^.]*\./,"").replace(/\s*\d+(,\d+)?\s*(Minuten?|Sekunden?)\.$/,"")}
@@ -624,13 +642,30 @@ function fi(n,c){return EX.findIndex(function(e){return e.n===n&&(c===undefined|
 function card(i){var e=EX[i],b=mk("button","xc"),m=mk("span","xm"),t=mk("span","xt",dur(e));
 b.appendChild(mk("span","xi",ic(e)));m.appendChild(mk("b","",ttl(e)));m.appendChild(mk("span","xd",sd(e)));b.appendChild(m);t.appendChild(mk("i","","▶"));b.appendChild(t);
 b.onclick=function(){openEx(i)};return b}
-function drawHome(){var h=new Date().getHours(),g=h<11?"Guten Morgen":h<18?"Moin":"Guten Abend";
+var MK="bfit24-mood",MD={},MJ=[["😞","Schlecht"],["😕","Geht so"],["😐","Okay"],["🙂","Gut"],["😄","Super"]];
+try{MD=JSON.parse(localStorage.getItem(MK))||{}}catch(e){}
+function mSave(){try{localStorage.setItem(MK,JSON.stringify(MD))}catch(e){}}
+var MTIP=[["Das klingt nach einem schweren Moment. Atme ein paar Minuten ruhig durch. Das hilft dir, runterzukommen.","4-7-8",0],["Nimm dir einen Moment für dich. Eine ruhige Atmung kann schon viel verändern.","Ruhig",0],["Ein kurzer Fokus-Moment bringt dich gut durch den Tag.","Box",0],["Schön! Halte das Gefühl mit einer kurzen Dankbarkeitsübung fest.","Dankbarkeit",3],["Stark! Nutze die Energie für eine kraftvolle Atemübung.","Kampfsport",0]];
+function drawMood(){var M=$("mood");if(!M)return;var t=ds(Date.now()),v=MD[t];M.innerHTML="";
+M.appendChild(mk("h3","",v?"Heute fühlst du dich: "+MJ[v-1][0]+" "+MJ[v-1][1]:"Wie fühlst du dich heute?"));
+var r=mk("div","mrow");MJ.forEach(function(x,i){var b=mk("button");b.setAttribute("aria-pressed",v===i+1);b.setAttribute("aria-label",x[1]);b.innerHTML="<span>"+x[0]+"</span><small>"+x[1]+"</small>";b.onclick=function(){MD[t]=i+1;mSave();drawMood()};r.appendChild(b)});M.appendChild(r);
+if(v){var tp=MTIP[v-1],p=mk("p","mtip",tp[0]),j=fi(tp[1]);if(j>=0){var g=mk("button","",ttl(EX[j])+" starten · "+dur(EX[j]));g.onclick=function(){openEx(j)};p.appendChild(g)}M.appendChild(p)}}
+function drawMoodP(){var P=$("moodp");if(!P)return;P.innerHTML="";var keys=Object.keys(MD),i;
+if(!keys.length){P.appendChild(mk("p","mtip","Trag auf der Startseite ein, wie du dich fühlst. Hier siehst du dann deinen Verlauf."));return}
+var w=mk("div","mwk"),n=new Date();n.setHours(12,0,0,0);var ln=["S","M","D","M","D","F","S"];
+for(i=6;i>=0;i--){var d=new Date(n.getTime()-i*864e5),val=MD[ds(d.getTime())],c=mk("div",val?"":"none");c.textContent=val?MJ[val-1][0]:"·";c.appendChild(mk("small","",ln[d.getDay()]));w.appendChild(c)}P.appendChild(w);
+var ex=[],no=[],all=[];keys.forEach(function(k){all.push(MD[k]);(S.d.indexOf(k)>=0?ex:no).push(MD[k])});
+var av=function(a){return a.reduce(function(x,y){return x+y},0)/a.length},fm=function(x){return x.toFixed(1).replace(".",",")};
+var tx="Durchschnitt: "+MJ[Math.round(av(all))-1][0]+" "+fm(av(all))+" von 5 ("+all.length+(all.length===1?" Tag":" Tage")+")";
+if(ex.length>=3&&no.length>=3){tx+=". An Tagen mit Übung: "+fm(av(ex))+", ohne Übung: "+fm(av(no))+(av(ex)>av(no)?". Übung tut dir gut! 🌿":".")}
+P.appendChild(mk("p","mtip",tx))}
+function drawHome(){drawMood();var h=new Date().getHours(),g=h<11?"Guten Morgen":h<18?"Moin":"Guten Abend";
 $("hi").innerHTML=g+"<br><span>Atme durch.</span>";
 var i=h<11?fi("Komplett",3):h>=17?fi("Komplett",4):fi("Mini-Pause"),e=EX[i],lb=h<11?"Für deinen Morgen":h>=17?"Für deinen Abend":"Für zwischendurch",done=S.d.indexOf(ds(Date.now()))>=0;
 var H=$("hero");H.innerHTML="";var b=mk("button","hero2");b.appendChild(mk("small","",done?"Heute schon geübt ✓ · "+lb:lb));b.appendChild(mk("b","",ttl(e)));b.appendChild(mk("span","",sd(e)));b.appendChild(mk("em","","Jetzt starten · "+dur(e)));b.onclick=function(){openEx(i)};H.appendChild(b);
 var W=$("wk");W.innerHTML="";var n=new Date();n.setHours(12,0,0,0);var mo=new Date(n.getTime()-((n.getDay()+6)%7)*864e5),ln=["M","D","M","D","F","S","S"],td=ds(n.getTime());
 for(var k=0;k<7;k++){var dt=ds(mo.getTime()+k*864e5),w=mk("div","wd"+(S.d.indexOf(dt)>=0?" on":"")+(dt===td?" now":""));w.appendChild(mk("i","",S.d.indexOf(dt)>=0?"✓":""));w.appendChild(mk("span","",ln[k]));W.appendChild(w)}
-var Q=$("quick");Q.innerHTML="";["Mini-Pause","Ruhig","Box","5-4-3-2-1","Einschlafen"].forEach(function(nm){var j=fi(nm),x=EX[j],q=mk("button","qk");q.appendChild(mk("span","",ic(x)));q.appendChild(mk("b","",ttl(x)));q.appendChild(mk("small","",dur(x)));q.onclick=function(){openEx(j)};Q.appendChild(q)});
+var Q=$("quick");Q.innerHTML="";["Mini-Pause","Schreibtisch-Reset","Ruhig","Nacken lösen","Box","5-4-3-2-1","Einschlafen"].forEach(function(nm){var j=fi(nm),x=EX[j],q=mk("button","qk");q.appendChild(mk("span","",ic(x)));q.appendChild(mk("b","",ttl(x)));q.appendChild(mk("small","",dur(x)));q.onclick=function(){openEx(j)};Q.appendChild(q)});
 var G=$("goals");G.innerHTML="";GOALS.forEach(function(x){var q=mk("button");q.appendChild(mk("span","",x[1]));q.appendChild(mk("b","",x[2]));q.appendChild(mk("small","xd",x[3]));q.onclick=function(){GF=x[0];tab("lib")};G.appendChild(q)})}
 function drawLib(){var F=$("gf"),L=$("lib");F.innerHTML="";L.innerHTML="";
 [["","Alle"]].concat(GOALS.map(function(x){return [x[0],x[1]+" "+x[2]]})).forEach(function(x){var b=mk("button","fc",x[1]);b.setAttribute("aria-pressed",GF===x[0]);b.onclick=function(){GF=x[0];drawLib()};F.appendChild(b)});
@@ -644,7 +679,7 @@ EX.forEach(function(e){if(e.c!==6||!e.game)return;var g=e.game,row=mk("div"),par
 GL[g].forEach(function(l,li){var m=gMeta(g,li),L2=RK[m.k]||[],b=L2.length?m.f(L2[0].s):(GB[m.k]?(m.low?fmtT(GB[m.k]):m.f(GB[m.k])):"–");parts.push(l[0]+": "+b)});
 row.appendChild(mk("b","",ic(e)+" "+ttl(e)));row.appendChild(mk("span","",parts.join(" · ")));rc.appendChild(row)});
 L.appendChild(rc)}
-function drawProg(){var s=streak(),k=Math.max(S.best,s),T=$("tl");T.innerHTML="";
+function drawProg(){drawMoodP();var s=streak(),k=Math.max(S.best,s),T=$("tl");T.innerHTML="";
 [["🔥",s,"Tage Serie"],["🏆",k,"Beste Serie"],["🍌",S.b,"Bananen gesammelt"],["📅",S.d.length,"Übungstage"]].forEach(function(x){var d=mk("div");d.appendChild(mk("b","",x[0]+" "+x[1]));d.appendChild(mk("small","",x[2]));T.appendChild(d)});
 wxpDraw();var R=$("rwl");R.innerHTML="";var ic=["🟢","⭐","🏅","👑"],ds2=["Ein grünes Stirnband","Ein goldener Stern","Eine Medaille","Eine Krone"];
 RW.forEach(function(r,i){var u=k>=r.d,d=mk("div","rwl"+(u?"":" lock")),m=mk("span");d.appendChild(mk("i","",ic[i]));m.appendChild(mk("b","",r.n+" · "+r.d+" Tage"));m.appendChild(mk("small","",u?"Freigeschaltet: "+ds2[i]:"Noch "+(r.d-k)+(r.d-k===1?" Tag":" Tage")+" Serie"));d.appendChild(m);R.appendChild(d)})}
@@ -732,8 +767,8 @@ if(S.d.indexOf(t)<0){S.d.push(t);S.d=S.d.slice(-90)}
 S.b++;var s=streak();if(s>S.best)S.best=s;save();
 RW.forEach(function(r){if(old<r.d&&S.best>=r.d)msg+=" · Neu: "+r.n+"!"});
 pop(msg);applyRewards();stats()}
-var PK="bfit24-opt",CK="bfit24-eigene",SND=true,VIB=true,AC=null,CUS=[4,0,6,0],lp="",lj=-1,lpk=-1,lsw=false;
-try{var po=JSON.parse(localStorage.getItem(PK));if(po){SND=po.s!==false;VIB=po.v!==false}}catch(e){}
+var PK="bfit24-opt",CK="bfit24-eigene",SND=true,VIB=true,VOI=false,AC=null,CUS=[4,0,6,0],lp="",lj=-1,lpk=-1,lsw=false;
+try{var po=JSON.parse(localStorage.getItem(PK));if(po){SND=po.s!==false;VIB=po.v!==false;VOI=po.t===true}}catch(e){}
 try{var c0=JSON.parse(localStorage.getItem(CK));if(c0&&c0.length===4)CUS=c0}catch(e){}
 function ac(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AC&&AC.state==="suspended")AC.resume();return AC}
 function tone(f,d,v){var a=SND&&ac();if(!a)return;var o=a.createOscillator(),g=a.createGain(),t=a.currentTime;o.type="sine";o.frequency.value=f;
@@ -741,9 +776,17 @@ g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.expone
 function gong(){tone(196,3.5,.22);tone(541,2.4,.08);tone(1058,1.2,.04)}
 function buzz(p){if(VIB&&navigator.vibrate){try{navigator.vibrate(p)}catch(e){}}}
 function cue(n){if(n==="Kraft-Ausatmen"){tone(196,.6,.14);buzz([50,30,50])}else if(/einatmen/i.test(n)){tone(392,.6,.1);buzz(35)}else if(/ausatmen/i.test(n)){tone(262,.8,.1);buzz(60)}else if(n==="Halten"){tone(330,.3,.05);buzz(20)}else if(/^Summen/.test(n)){tone(220,1.4,.09);buzz([30,30,30,30,30])}else if(/^Löwe/.test(n)){tone(180,.8,.16);buzz([80,40,80])}}
-function optSave(){try{localStorage.setItem(PK,JSON.stringify({s:SND,v:VIB}))}catch(e){}}
+function optSave(){try{localStorage.setItem(PK,JSON.stringify({s:SND,v:VIB,t:VOI}))}catch(e){}}
+var SPV=null;
+function spc(t){return String(t).replace(/[\u{1F000}-\u{1FFFF}\u2600-\u27BF\uFE0F\u200d]/gu,"").replace(/\s+/g," ").trim()}
+function spStop(){try{if(window.speechSynthesis)speechSynthesis.cancel()}catch(e){}}
+function sp(t,warm){if(!VOI||!window.speechSynthesis||!window.SpeechSynthesisUtterance)return;
+try{t=warm?" ":spc(t);if(!t&&!warm)return;var u=new SpeechSynthesisUtterance(t);u.lang="de-DE";u.rate=.92;u.pitch=.95;if(warm)u.volume=0;
+if(!SPV){var V=speechSynthesis.getVoices().filter(function(v){return /^de/i.test(v.lang)});SPV=V.filter(function(v){return /google|anna|katja|markus|yannick|petra|hedda/i.test(v.name)})[0]||V[0]||null}
+if(SPV)u.voice=SPV;if(!warm)speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
 function optDraw(){var o=$("opt");o.innerHTML="";
 var a=mk("button","chip",SND?"🔔 Ton an":"🔕 Ton aus");a.setAttribute("aria-pressed",SND);a.onclick=function(){SND=!SND;optSave();optDraw();if(SND)tone(523,.5,.1)};o.appendChild(a);
+if(window.speechSynthesis){var vc=mk("button","chip",VOI?"🗣️ Stimme an":"🤫 Stimme aus");vc.setAttribute("aria-pressed",VOI);vc.onclick=function(){VOI=!VOI;optSave();optDraw();if(VOI){spStop();sp("Die Stimme führt dich durch die Übung.")}else spStop()};o.appendChild(vc)}
 if(navigator.vibrate){var b=mk("button","chip",VIB?"📳 Vibration an":"📴 Vibration aus");b.setAttribute("aria-pressed",VIB);b.onclick=function(){VIB=!VIB;optSave();optDraw();buzz(40)};o.appendChild(b)}}
 function custApply(){var e=EX.filter(function(x){return x.custom})[0],nm=["Einatmen","Halten","Ausatmen","Halten"],tg=[1,1,0,0],s=[],i,tot=0;
 for(i=0;i<4;i++){if(CUS[i]>0)s.push([nm[i],CUS[i],tg[i]]);tot+=CUS[i];$("r"+i).value=CUS[i];$("v"+i).textContent=CUS[i]+" s"}
@@ -907,7 +950,7 @@ try{RMo=!!(window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matc
 var HP={belly:[[96,206],[144,206]],heart:[[104,182],[136,182]],guard:[[86,176],[154,176]],bic:[[56,138],[184,138]],ears:[[48,124],[192,124]],lion:[[34,164],[206,164]],up:[[44,108],[196,108]],chin:[[42,216],[144,142]]};
 var RT={fist:1,pv:1,jit:1,zz:1,pa:.2,lv:1,tg:.25,fl:.4,fr:.4,bob:.3,tilt:.15,pu:.12,sc:.2,gt:.25};
 function lerp(a,b,u){return a+(b-a)*u}
-function rest(){PT.lx=42;PT.ly=216-3*V;PT.rx=198;PT.ry=216-3*V;PT.fist=0;PT.lean=0;PT.bob=0;PT.tx=0;PT.tilt=0;PT.fl=0;PT.fr=0;PT.shx=0;PT.shy=-2.5*V;PT.pu=0;PT.pv=0;PT.zz=0;PT.tg=0;PT.brow=0;PT.jit=WX.cold&&!RMo?.3:0;PT.pa=0;PT.gt=0;PT.lv=1;PT.sc=1;if(WX.windy&&!RMo)PT.lean=1.6*Math.sin(performance.now()/900)}
+function rest(){PT.lx=42;PT.ly=216-3*V;PT.rx=198;PT.ry=216-3*V;PT.fist=0;PT.lean=0;PT.bob=0;PT.tx=0;PT.tilt=0;PT.fl=0;PT.fr=0;PT.shx=0;PT.shy=-2.5*V;PT.pu=0;PT.pv=0;PT.zz=0;PT.tg=0;PT.brow=0;PT.nod=0;PT.jit=WX.cold&&!RMo?.3:0;PT.pa=0;PT.gt=0;PT.lv=1;PT.sc=1;if(WX.windy&&!RMo)PT.lean=1.6*Math.sin(performance.now()/900)}
 function H(l,r,u){if(u===undefined)u=1;if(l){PT.lx=lerp(PT.lx,l[0],u);PT.ly=lerp(PT.ly,l[1],u)}if(r){PT.rx=lerp(PT.rx,r[0],u);PT.ry=lerp(PT.ry,r[1],u)}}
 function HU(u){H(HP.up[0],HP.up[1],u)}
 function ik(sx,sy,tx,ty,U,F,side){var dx=tx-sx,dy=ty-sy,d=Math.sqrt(dx*dx+dy*dy)||1,ux=dx/d,uy=dy/d,mx=U+F-.5,mn=Math.abs(U-F)+.5;if(d>mx){d=mx;tx=sx+ux*d;ty=sy+uy*d}if(d<mn)d=mn;
@@ -932,7 +975,7 @@ var g=$("p"),jt=RMo?0:c.jit,jx=jt?(Math.random()-.5)*2*jt:0,jy=jt?(Math.random()
 g.setAttribute("transform","translate("+(c.tx+jx).toFixed(2)+" "+(c.bob+jy).toFixed(2)+") translate(120 240) rotate("+c.lean.toFixed(2)+") scale("+((1+.07*V)*c.sc).toFixed(3)+") translate(-120 -240)");
 g.classList.toggle("fist",c.fist>.5);
 var hp=plank(c);
-var hx=lerp(120,hp[0],pu)+(1-pu)*(c.shx*.5),hy=lerp(104,hp[1],pu)-(1-pu)*(2.2*V-c.shy*.35),hs=lerp(1,.5,pu),tl=c.tilt*(1-pu)-8*pu;
+var hx=lerp(120,hp[0],pu)+(1-pu)*(c.shx*.5),hy=lerp(104,hp[1],pu)-(1-pu)*(2.2*V-c.shy*.35-(c.nod||0)*7),hs=lerp(1,.5,pu),tl=c.tilt*(1-pu)-8*pu;
 $("hd").setAttribute("transform","translate("+(hx-120).toFixed(1)+" "+(hy-104).toFixed(1)+") translate(120 104) scale("+hs.toFixed(3)+") translate(-120 -104) rotate("+tl.toFixed(2)+" 120 150)");
 var st=pu<.98,so=Math.max(0,1-pu*1.4);
 $("bd").style.display=$("am").style.display=$("zg").style.display=st?"":"none";
@@ -953,9 +996,36 @@ if(!PC){PC={};for(var k in PT)PC[k]=PT[k]}
 for(var k2 in PT){if(typeof PT[k2]==="number")PC[k2]+=(PT[k2]-PC[k2])*(RT[k2]||.15)}
 rend(PC,now);requestAnimationFrame(rp)}
 function walk(t){var s=Math.sin(t*Math.PI/1.2);PT.tx=4*s;PT.bob=-3*Math.abs(s);PT.lean=2.5*s;PT.fl=Math.max(0,s)*7;PT.fr=Math.max(0,-s)*7;PT.lx=42+3*s;PT.rx=198+3*s;PT.ry=216-9*Math.max(0,s)+3*Math.max(0,-s);PT.ly=216-9*Math.max(0,-s)+3*Math.max(0,s);PT.shx=1.5*s;PT.tilt=-1.5*s}
+var MOB={"Nacken lösen":1,"Rücken mobilisieren":1,"Hüfte & Beine öffnen":1,"Schreibtisch-Reset":1},HHIP=[[72,198],[168,198]];
+function mob(n,t){var sn=Math.sin,cs=Math.cos,PI=Math.PI,s,u;
+switch(n){
+case"Aufrichten":PT.bob=-3;PT.sc=1.03;break;
+case"Kinn zur Brust":PT.nod=Math.min(1,t/3);PT.shy=2;break;
+case"Ohr zur linken Schulter":PT.tilt=-15*Math.min(1,t/2.5);break;
+case"Ohr zur rechten Schulter":PT.tilt=15*Math.min(1,t/2.5);break;
+case"Kopf drehen":PX=3*sn(t*2*PI/7);PT.tilt=2*sn(t*2*PI/7);break;
+case"Schultern kreisen":PT.shx=5*cs(t*2.1);PT.shy=5*sn(t*2.1)-1;break;
+case"Schultern hochziehen":s=Math.max(0,sn(t*2*PI/5));PT.shy=-7*Math.min(1,s*1.6);break;
+case"Hände im Nacken":H([96,118],[144,118]);break;
+case"Arme strecken":HU(.5-.5*cs(t*2*PI/6));break;
+case"Seitneigen":PT.lean=11*sn(t*2*PI/6);HU(.9);break;
+case"Oberkörper drehen":s=sn(t*2*PI/5);PT.lx=100+62*s;PT.rx=140+62*s;PT.ly=196;PT.ry=196;PT.shx=3*s;PT.tilt=3*s;PT.tx=-2*s;break;
+case"Katze und Kuh":u=.5-.5*cs(t*2*PI/6);H([84,206],[156,206]);PT.bob=3*u;PT.nod=u;PT.shy=-4+6*u;break;
+case"Vorbeugen":u=Math.min(1,t/6);PT.nod=u;PT.bob=7*u;PT.sc=1-.04*u;PT.ly=216+8*u;PT.ry=216+8*u;break;
+case"Aufrollen":u=1-Math.min(1,t/8);PT.nod=u;PT.bob=7*u;PT.sc=1-.04*u;PT.ly=216+8*u;PT.ry=216+8*u;break;
+case"Hüftkreisen":H(HHIP[0],HHIP[1]);PT.tx=5*sn(t*2.2);PT.lean=3*cs(t*2.2);break;
+case"Ausfallschritt":s=sn(t*2*PI/10);H(HHIP[0],HHIP[1]);PT.bob=4*Math.abs(s);PT.fl=Math.max(0,s)*5;PT.fr=Math.max(0,-s)*5;break;
+case"Knie heben":s=sn(t*2*PI/2.4);PT.fl=Math.max(0,s)*9;PT.fr=Math.max(0,-s)*9;PT.bob=-1.5*Math.abs(s);PT.ry=216-8*Math.max(0,s);PT.ly=216-8*Math.max(0,-s);break;
+case"Wadenheben":PT.bob=-5*Math.abs(sn(t*2*PI/3));break;
+case"Beine ausschütteln":PT.jit=.9;PT.fl=Math.max(0,sn(t*16))*5;PT.fr=Math.max(0,-sn(t*16))*5;PT.lx=42+6*sn(t*22);PT.rx=198+6*sn(t*21);break;
+case"Handgelenke kreisen":PT.lx=100+8*cs(t*5);PT.ly=178+8*sn(t*5);PT.rx=140-8*cs(t*5);PT.ry=178+8*sn(t*5);break;
+case"Augen entspannen":PT.bob=2;break;
+case"Tief ausatmen":H(HP.belly[0],HP.belly[1]);PT.tilt=2;break;
+case"Nachspüren":PT.bob=2;H(HP.heart[0],HP.heart[1]);break}}
 function gp(E,q,t,tn){var n=q[0],z=q[2],sn=Math.sin,cs=Math.cos,PI=Math.PI,s,m=function(k){return n.indexOf(k)>=0},N=E.n;
 if(q[4]==="p"){PT.pu=1;PT.pv=.5-.5*cs(t*PI/2);return}
 if(q[4]==="w"){walk(t);return}
+if(MOB[N]){mob(n,t);return}
 if(tn){PT.jit=.8;PT.sc=.93;if(z==="arms"||N==="Mentale Vorbereitung"){PT.fist=1;H(HP.bic[0],HP.bic[1])}else if(z==="chest"){PT.fist=1;PT.shy=-7}else if(z==="head"){PT.brow=4}else if(z==="belly"){PT.sc=.9}else if(z==="hips"){PT.fist=1}return}
 if(N==="Body-Scan"){PT.tilt=2*sn(t*.5);if(n==="Bauch")H(HP.belly[0],HP.belly[1]);if(n==="Arme & Hände")PT.fist=sn(t*1.4)>0?1:0;if(n==="Gesicht & Kopf")PT.brow=-1.5*sn(t*1.1);if(n==="Brust & Schultern")PT.shy=-2+2*sn(t*1.1);if(n==="Beine & Becken"||n==="Füße"){PT.fl=Math.max(0,sn(t*1.3))*2;PT.fr=Math.max(0,-sn(t*1.3))*2}return}
 if(N==="Muskelentspannung"){if(n==="Loslassen"){PT.shy=3;PT.bob=2}if(n==="Ganzer Körper")PT.bob=2;return}
@@ -997,7 +1067,7 @@ if(!run)return;M+=(TM-M)*.12;C+=(TC-C)*.15;face();var el=(now-t0)/1000,E=EX[ei],
 if(el>=tot){return stop(true)}
 rest();
 if(g){var a=0;for(var j=0;j<E.g.length;j++){var q=E.g[j];if(el<a+q[3]){$("phase").textContent=q[0];$("count").className="count t";$("count").textContent=q[1];zone(q[2]);break}a+=q[3]}
-if(j!==lj){if(j>0){tone(523,.6,.08);buzz(25)}lj=j;lpk=-1}var tn=q&&q[4]==="t";$("svg").classList.toggle("grass",!!(q[5]&&q[5].indexOf("g")>=0));if(q[5]&&q[5].indexOf("k")>=0&&el-lastCloud>2.6){lastCloud=el;cloud()}
+if(j!==lj){if(j>0){tone(523,.6,.08);buzz(25)}lj=j;lpk=-1;sp(q[0]+". "+q[1])}var tn=q&&q[4]==="t";$("svg").classList.toggle("grass",!!(q[5]&&q[5].indexOf("g")>=0));if(q[5]&&q[5].indexOf("k")>=0&&el-lastCloud>2.6){lastCloud=el;cloud()}
 TC=q[5]&&q[5].indexOf("c")>=0?1:0;TM=q[5]&&q[5].indexOf("m")>=0?.1+.5*(.5-.5*Math.cos(el*Math.PI/4)):0;PX=(E.n==="5-4-3-2-1"&&j===1)?2.4*Math.sin(el*1.7):(q[5]&&q[5].indexOf("e")>=0)?2.2*Math.sin(el*.6):0;
 set(tn?0:.5-.5*Math.cos(el*Math.PI/4));var t=el-a;
 if(q[4]==="p"){var pv=.5-.5*Math.cos(t*Math.PI/2),pk=Math.floor(t/2);if(pk!==lpk){lpk=pk;tone(pk%2?392:262,.4,.1);buzz(40)}set(0);TM=t%4>=2?.6:0;$("phase").textContent=(t%4<2?"Runter":"Hoch")+" · "+(Math.floor(t/4)+1)+"/"+(q[3]/4)}
@@ -1007,12 +1077,12 @@ $("prog").style.width=(el/tot*100)+"%";raf=requestAnimationFrame(tick);return}
 var S=EX[ei].s,cyc=S.reduce(function(a,x){return a+x[1]},0),c=el%cyc,acc=0;
 for(var i=0;i<S.length;i++){var st=S[i];if(c<acc+st[1]){
 var f=(c-acc)/st[1],from=S[(i+S.length-1)%S.length][2],v=st[2]===from?st[2]:from+(st[2]-from)*ease(f);
-set(v);if(st[0]!==lp){if(lp)cue(st[0]);lp=st[0]}TM=(st[0]==="Halten"||E.nose)?0:.12+.88*v;TC=E.k?0:1;PX=0;if(E.alt){$("svg").classList.toggle("np1",/^Links/.test(st[0]));$("svg").classList.toggle("np2",/^Rechts/.test(st[0]))}if(E.lion){TM=st[0]==="Löwe! 🦁"?1.5:0;TC=st[0]==="Löwe! 🦁"?0:1}if(E.k){zone(st[0]==="Halten"||st[0]==="Kraft-Ausatmen"?"belly":"")}
+set(v);if(st[0]!==lp){if(lp)cue(st[0]);lp=st[0];sp(st[0])}TM=(st[0]==="Halten"||E.nose)?0:.12+.88*v;TC=E.k?0:1;PX=0;if(E.alt){$("svg").classList.toggle("np1",/^Links/.test(st[0]));$("svg").classList.toggle("np2",/^Rechts/.test(st[0]))}if(E.lion){TM=st[0]==="Löwe! 🦁"?1.5:0;TC=st[0]==="Löwe! 🦁"?0:1}if(E.k){zone(st[0]==="Halten"||st[0]==="Kraft-Ausatmen"?"belly":"")}
 bp(E,st[0],v);$("phase").textContent=st[0];$("count").textContent=Math.ceil(st[1]-(c-acc));break}acc+=st[1]}
 $("prog").style.width=(el/tot*100)+"%";raf=requestAnimationFrame(tick)}
-function start(){gong();buzz(30);lp="";lj=-1;lpk=-1;lockC(true);cancelAnimationFrame(celRaf);$("conf").innerHTML="";$("sky").innerHTML="";lastCloud=-9;W=0;run=true;$("go").textContent="Stopp";$("phase").textContent="Los geht's";t0=performance.now();raf=requestAnimationFrame(tick)}
-function stop(done){run=false;lockC(false);cancelAnimationFrame(raf);$("go").textContent="Start";set(0);$("count").textContent="";$("count").className="count";zone("");TM=TC=PX=M=C=W=0;face();$("p").classList.remove("fist");$("svg").classList.remove("grass");$("svg").classList.remove("np1");$("svg").classList.remove("np2");$("sky").innerHTML="";$("prog").style.width="0";
-$("phase").textContent=done?"Gut gemacht 🌿":"Bereit?";idle();if(done){gong();buzz([80,60,80]);celebrate();reward()}}
+function start(){gong();buzz(30);spStop();sp("",true);lp="";lj=-1;lpk=-1;lockC(true);cancelAnimationFrame(celRaf);$("conf").innerHTML="";$("sky").innerHTML="";lastCloud=-9;W=0;run=true;$("go").textContent="Stopp";$("phase").textContent="Los geht's";t0=performance.now();raf=requestAnimationFrame(tick)}
+function stop(done){run=false;spStop();lockC(false);cancelAnimationFrame(raf);$("go").textContent="Start";set(0);$("count").textContent="";$("count").className="count";zone("");TM=TC=PX=M=C=W=0;face();$("p").classList.remove("fist");$("svg").classList.remove("grass");$("svg").classList.remove("np1");$("svg").classList.remove("np2");$("sky").innerHTML="";$("prog").style.width="0";
+$("phase").textContent=done?"Gut gemacht 🌿":"Bereit?";idle();if(done){gong();buzz([80,60,80]);celebrate();reward();sp("Gut gemacht.")}}
 $("go").onclick=function(){run?stop(false):start()};
 function go(){$("land").classList.add("hide");$("app").classList.remove("hide");try{localStorage.setItem("bfit24-seen","1")}catch(e){}tab("home");try{history.replaceState(null,"","#app")}catch(e){}}
 function info(){if(!$("play").classList.contains("hide"))closeEx();if(run)stop(false);$("app").classList.add("hide");$("land").classList.remove("hide");window.scrollTo(0,0);try{history.replaceState(null,"","#")}catch(e){}}
